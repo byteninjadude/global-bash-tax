@@ -1,0 +1,60 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  heading: string;
+  canonicalPath: string;
+  effectiveDate: string;
+}
+
+const {
+  title,
+  description,
+  heading,
+  canonicalPath,
+  effectiveDate,
+} = Astro.props;
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={canonicalPath}
+>
+  <section class="page-hero page-hero--compact">
+    <div class="container">
+      <Breadcrumbs
+        items={[
+          {
+            label: "Home",
+            href: "/",
+          },
+          {
+            label: heading,
+          },
+        ]}
+      />
+
+      <div class="page-hero__content">
+        <p class="eyebrow">
+          Website Information
+        </p>
+
+        <h1>{heading}</h1>
+
+        <p>
+          Last updated: {effectiveDate}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <article class="section legal-content">
+    <div class="container content-page">
+      <slot />
+    </div>
+  </article>
+</BaseLayout>

@@ -1,0 +1,146 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import ConsultationCta from "../../components/ConsultationCta.astro";
+
+const audiences = [
+  {
+    title: "Individuals and Families",
+    text:
+      "Personal tax preparation involving wages, dependents, investments, retirement income, deductions, credits, and other filing considerations.",
+    href:
+      "/tax-services/individual-tax-preparation/",
+  },
+  {
+    title: "Self-Employed Professionals",
+    text:
+      "Support for contractors, consultants, freelancers, entrepreneurs, and others reporting business income and expenses.",
+    href:
+      "/tax-services/self-employed-tax-services/",
+  },
+  {
+    title: "Small-Business Owners",
+    text:
+      "Business-return preparation and planning involving entity-specific forms, expenses, assets, and owner reporting.",
+    href:
+      "/tax-services/business-tax-preparation/",
+  },
+  {
+    title: "Real Estate Investors",
+    text:
+      "Tax preparation involving rental income, property expenses, depreciation, asset reporting, and multi-state ownership.",
+    href:
+      "/tax-services/real-estate-investor-tax-services/",
+  },
+  {
+    title: "Corporations and Partnerships",
+    text:
+      "Preparation of qualifying Forms 1120, 1120S, and 1065, including applicable shareholder or partner reporting.",
+    href:
+      "/tax-services/business-tax-preparation/",
+  },
+  {
+    title: "Clients With Multi-State Activity",
+    text:
+      "Support when residence, work, business activity, or real estate involves more than one state.",
+    href:
+      "/tax-services/multi-state-tax-preparation/",
+  },
+];
+---
+
+<BaseLayout
+  title="Who We Help | Global Bash Tax Services"
+  description="Global Bash provides remote tax preparation for individuals, self-employed professionals, businesses, investors, corporations, partnerships, and multi-state clients."
+  canonicalPath="/who-we-help/"
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Who We Help" },
+        ]}
+      />
+
+      <div class="page-hero__content">
+        <p class="eyebrow">Who We Help</p>
+
+        <h1>
+          Tax Services Built Around Real Situations
+        </h1>
+
+        <p>
+          Income sources, business structures,
+          investments, property ownership, and life
+          changes can all affect tax filing requirements.
+        </p>
+
+        <p>
+          Global Bash provides personalized remote
+          support for clients who want direct
+          communication and careful professional review.
+        </p>
+
+        <a
+          class="button button--primary"
+          href="/book-tax-consultation/"
+        >
+          Discuss Your Tax Situation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="audience-detail-grid">
+        {
+          audiences.map((audience) => (
+            <article class="audience-detail-card">
+              <h2>{audience.title}</h2>
+
+              <p>{audience.text}</p>
+
+              <a
+                class="text-link"
+                href={audience.href}
+              >
+                Explore related tax services
+              </a>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="container content-page">
+      <p class="eyebrow">Personalized Review</p>
+
+      <h2>
+        Your Filing Needs Depend on Your Circumstances
+      </h2>
+
+      <p>
+        Two clients with similar income may have very
+        different tax requirements because of filing
+        status, dependents, investments, business
+        activity, property, state residency, or
+        prior-year history.
+      </p>
+
+      <p>
+        Global Bash reviews the facts of each situation
+        before confirming the appropriate service,
+        required documents, scope of work, and pricing.
+      </p>
+    </div>
+  </section>
+
+  <ConsultationCta
+    heading="Not Sure Which Category Fits You?"
+    text="Send a general description of your tax situation, and Milana will contact you about the appropriate next step."
+  />
+</BaseLayout>

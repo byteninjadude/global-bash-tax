@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import ConsultationCta from "../components/ConsultationCta.astro";
+import { faqGroups } from "../content/faq";
+---
+
+<BaseLayout
+  title="Tax Preparation FAQs | Global Bash Tax Services"
+  description="Answers to common questions about remote tax preparation, individual and business returns, amended filings, tax planning, and working with Global Bash."
+  canonicalPath="/faq/"
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Frequently Asked Questions" },
+        ]}
+      />
+
+      <div class="page-hero__content">
+        <p class="eyebrow">
+          Frequently Asked Questions
+        </p>
+
+        <h1>
+          Answers to Common Tax Service Questions
+        </h1>
+
+        <p>
+          These answers provide general information
+          about working with Global Bash. They are not
+          individualized tax, legal, financial, or
+          investment advice.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {
+    faqGroups.map((group, index) => (
+      <section
+        class:list={[
+          "section",
+          index % 2 === 1 && "section--light",
+        ]}
+      >
+        <div class="container content-page">
+          <h2>{group.title}</h2>
+
+          <div class="faq-list">
+            {group.items.map((faq) => (
+              <details class="faq-item">
+                <summary>{faq.question}</summary>
+
+                <div class="faq-item__answer">
+                  <p>{faq.answer}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    ))
+  }
+
+  <ConsultationCta
+    heading="Have a Question About Your Own Situation?"
+    text="General website information cannot replace a review of your specific tax facts. Begin with a consultation."
+  />
+</BaseLayout>

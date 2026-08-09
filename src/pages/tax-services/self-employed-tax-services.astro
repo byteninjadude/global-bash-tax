@@ -1,0 +1,165 @@
+---
+import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
+
+const sections = [
+  {
+    eyebrow: "Who This Service Is For",
+    title: "Tax Support for Independent Work",
+    bullets: [
+      "Independent contractors",
+      "Consultants",
+      "Freelancers",
+      "Gig workers",
+      "Sole proprietors",
+      "Online sellers",
+      "Professional service providers",
+      "Owner-operators",
+      "Entrepreneurs",
+      "People receiving Forms 1099",
+    ],
+  },
+  {
+    eyebrow: "Common Tax Areas",
+    title: "What Self-Employed Tax Preparation May Include",
+    bullets: [
+      "Schedule C income",
+      "Business expenses",
+      "Contractor income",
+      "Estimated tax payments",
+      "Self-employment tax",
+      "Vehicle and mileage records",
+      "Home-office information",
+      "Business equipment",
+      "Depreciation",
+      "Health-insurance information",
+      "Retirement contribution considerations",
+      "Applicable state returns",
+      "Multi-state business activity",
+    ],
+    note:
+      "A business expense must meet applicable tax requirements and be supported by appropriate records. Not every expense is deductible.",
+  },
+  {
+    eyebrow: "Recordkeeping",
+    title: "Better Records Support Better Tax Preparation",
+    paragraphs: [
+      "Self-employed clients should maintain organized records of income, expenses, mileage, equipment, contractors, estimated payments, and business activity.",
+      "Mixing personal and business transactions or waiting until filing season to reconstruct records can make preparation more difficult.",
+    ],
+    bullets: [
+      "Income statements and Forms 1099",
+      "Business bank and card records",
+      "Receipts and invoices",
+      "Mileage logs",
+      "Asset purchase information",
+      "Home-office measurements and expenses",
+      "Estimated tax payment confirmations",
+      "Prior-year tax returns",
+    ],
+  },
+  {
+    eyebrow: "Estimated Payments",
+    title: "Self-Employment May Require Quarterly Planning",
+    paragraphs: [
+      "Self-employed clients may not have taxes withheld from their income in the same way as employees.",
+      "Estimated payments may be required depending on expected income, deductions, credits, prior-year tax, and other factors.",
+    ],
+    relatedLink: {
+      label: "Explore Tax Planning Services",
+      href: "/tax-services/tax-planning/",
+    },
+  },
+  {
+    eyebrow: "Remote Process",
+    title: "A Remote Process for Self-Employed Clients",
+    steps: [
+      {
+        title: "Request a Consultation",
+        text:
+          "Describe the type of work, tax year, states involved, and general filing needs.",
+      },
+      {
+        title: "Identify Required Records",
+        text:
+          "Milana explains the income, expense, asset, and payment records needed.",
+      },
+      {
+        title: "Confirm Scope and Pricing",
+        text:
+          "Fees are based on the complexity of the activity and condition of the records.",
+      },
+      {
+        title: "Provide Records Securely",
+        text:
+          "Documents are provided through the approved secure process after engagement.",
+      },
+      {
+        title: "Prepare and Review",
+        text:
+          "The return is prepared and follow-up questions are addressed.",
+      },
+    ],
+  },
+];
+
+const faqs = [
+  {
+    question: "What if I did not receive a Form 1099?",
+    answer:
+      "Business income may still need to be reported even if no Form 1099 was received. The reporting requirement depends on the income actually earned and the applicable tax rules.",
+  },
+  {
+    question: "Can I deduct all of my business expenses?",
+    answer:
+      "No. Expenses must meet applicable tax requirements and should be supported by appropriate records. Personal expenses are generally not deductible as business expenses.",
+  },
+  {
+    question: "Can you help with quarterly estimated taxes?",
+    answer:
+      "Estimated-payment planning may be included in a separate planning engagement or discussed as part of the client’s tax needs.",
+  },
+  {
+    question: "Do you form LLCs or corporations?",
+    answer:
+      "Global Bash does not advertise legal entity formation. Legal formation and liability questions should be reviewed with a qualified attorney.",
+  },
+];
+
+const relatedLinks = [
+  {
+    label: "Individual Tax Preparation",
+    href: "/tax-services/individual-tax-preparation/",
+  },
+  {
+    label: "Business Tax Preparation",
+    href: "/tax-services/business-tax-preparation/",
+  },
+  {
+    label: "Tax Planning",
+    href: "/tax-services/tax-planning/",
+  },
+  {
+    label: "Multi-State Tax Preparation",
+    href: "/tax-services/multi-state-tax-preparation/",
+  },
+];
+---
+
+<ServicePageLayout
+  title="Self-Employed Tax Services | Global Bash"
+  description="Remote tax preparation and planning support for independent contractors, consultants, freelancers, and self-employed professionals."
+  canonicalPath="/tax-services/self-employed-tax-services/"
+  eyebrow="Self-Employed Tax Services"
+  heading="Personalized Tax Help for Independent Professionals"
+  introduction={[
+    "Self-employment can create additional filing, recordkeeping, and estimated-payment responsibilities.",
+    "Global Bash helps independent professionals organize relevant information, prepare applicable returns, and understand the tax items connected with their business activity.",
+  ]}
+  primaryCtaLabel="Request Self-Employed Tax Help"
+  primaryCtaHref="/book-tax-consultation/?service=self-employed-tax-services"
+  sections={sections}
+  faqs={faqs}
+  relatedLinks={relatedLinks}
+  finalCtaHeading="Get Help With Your Self-Employed Tax Return"
+  finalCtaText="Discuss your business income, expenses, records, estimated payments, and filing requirements with Milana."
+/>

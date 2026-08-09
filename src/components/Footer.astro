@@ -1,0 +1,162 @@
+---
+import {
+  legalNavigation,
+  serviceNavigation,
+  site,
+} from "../config/site";
+
+const currentYear =
+  new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+    <section class="site-footer__brand">
+      <a
+        class="site-footer__logo"
+        href="/"
+        aria-label="Global Bash Tax Services home"
+      >
+        <img
+          src="/images/branding/global-bash-tax-logo-white.svg"
+          alt="Global Bash Tax Services"
+          width="190"
+          height="98"
+          loading="lazy"
+        />
+      </a>
+
+      <p>
+        Personalized remote tax preparation and
+        planning for individuals and businesses.
+      </p>
+
+      <p class="site-footer__credentials">
+        Milana Bash, MBA<br />
+        IRS-Registered Tax Return Preparer
+      </p>
+
+      <p>
+        Based in Illinois and Florida.<br />
+        Fully remote service.
+      </p>
+    </section>
+
+    <section>
+      <h2>Tax Services</h2>
+
+      <ul>
+        {
+          serviceNavigation
+            .slice(1, 7)
+            .map((item) => (
+              <li>
+                <a href={item.href}>
+                  {item.label}
+                </a>
+              </li>
+            ))
+        }
+      </ul>
+
+      <a
+        class="site-footer__all-link"
+        href="/tax-services/"
+      >
+        View all tax services
+      </a>
+    </section>
+
+    <section>
+      <h2>Company</h2>
+
+      <ul>
+        <li>
+          <a href="/about-milana-bash/">
+            About Milana
+          </a>
+        </li>
+
+        <li>
+          <a href="/who-we-help/">
+            Who We Help
+          </a>
+        </li>
+
+        <li>
+          <a href="/faq/">
+            Frequently Asked Questions
+          </a>
+        </li>
+
+        <li>
+          <a href="/contact/">
+            Contact
+          </a>
+        </li>
+
+        <li>
+          <a href="/book-tax-consultation/">
+            Book a Consultation
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+
+      <address>
+        <a href={site.phoneHref}>
+          {site.phoneDisplay}
+        </a>
+
+        <a href={`mailto:${site.email}`}>
+          {site.email}
+        </a>
+      </address>
+
+      <p>
+        English<br />
+        Bulgarian<br />
+        Turkish
+      </p>
+
+      <a
+        href={site.realEstateUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Global Bash Real Estate
+      </a>
+    </section>
+  </div>
+
+  <div class="container site-footer__legal">
+    <nav aria-label="Legal information">
+      <ul>
+        {
+          legalNavigation.map((item) => (
+            <li>
+              <a href={item.href}>
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <p>
+      © {currentYear} Global Bash.
+      All rights reserved.
+    </p>
+
+    <p class="site-footer__disclaimer">
+      Website information is general and does not
+      constitute individualized tax, legal,
+      financial, or investment advice. Submitting a
+      form does not establish a client relationship.
+    </p>
+  </div>
+</footer>

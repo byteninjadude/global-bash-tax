@@ -1,0 +1,88 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const type =
+  Astro.url.searchParams.get("type");
+
+const messages = {
+  consultation: {
+    eyebrow:
+      "Consultation Request Received",
+    heading:
+      "Thank You for Contacting Global Bash",
+    text:
+      "Your tax consultation request has been received. Milana will review the information and contact you about the appropriate next step.",
+  },
+
+  contact: {
+    eyebrow:
+      "Message Received",
+    heading:
+      "Thank You for Your Message",
+    text:
+      "Your general inquiry has been received. Global Bash will respond using the contact information you provided.",
+  },
+
+  lead: {
+    eyebrow:
+      "Request Received",
+    heading:
+      "Thank You for Reaching Out",
+    text:
+      "Your request has been received. Milana will review the general information and contact you about your tax-service needs.",
+  },
+} as const;
+
+const selected =
+  messages[
+    type as keyof typeof messages
+  ] ?? messages.contact;
+---
+
+<BaseLayout
+  title="Form Received | Global Bash Tax Services"
+  description="Your Global Bash Tax Services website inquiry has been received."
+  canonicalPath="/form-confirmation/"
+  noindex={true}
+>
+  <section class="confirmation-page">
+    <div class="container content-narrow">
+      <p class="eyebrow">
+        {selected.eyebrow}
+      </p>
+
+      <h1>
+        {selected.heading}
+      </h1>
+
+      <p>
+        {selected.text}
+      </p>
+
+      <aside class="information-note">
+        <p>
+          Do not send Social Security numbers, tax
+          documents, banking information, or other
+          sensitive personal information through
+          ordinary email.
+        </p>
+      </aside>
+
+      <div class="button-group">
+        <a
+          class="button button--primary"
+          href="/"
+        >
+          Return to Home
+        </a>
+
+        <a
+          class="button button--secondary"
+          href="/tax-services/"
+        >
+          View Tax Services
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

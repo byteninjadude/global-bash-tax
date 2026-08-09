@@ -1,0 +1,405 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ServiceCard from "../components/ServiceCard.astro";
+import AudienceCard from "../components/AudienceCard.astro";
+import ConsultationCta from "../components/ConsultationCta.astro";
+import { site } from "../config/site";
+import "../styles/home.css";
+
+const services = [
+  {
+    title: "Individual Tax Preparation",
+    description:
+      "Remote preparation of federal and applicable state individual income tax returns.",
+    href: "/tax-services/individual-tax-preparation/",
+  },
+  {
+    title: "Business Tax Preparation",
+    description:
+      "Tax return preparation for qualifying corporations, partnerships, LLCs, and business owners.",
+    href: "/tax-services/business-tax-preparation/",
+  },
+  {
+    title: "Tax Planning",
+    description:
+      "Year-round guidance involving estimated payments, preparation, and future filing needs.",
+    href: "/tax-services/tax-planning/",
+  },
+  {
+    title: "Self-Employed Tax Services",
+    description:
+      "Support for contractors, consultants, entrepreneurs, and other self-employed professionals.",
+    href: "/tax-services/self-employed-tax-services/",
+  },
+  {
+    title: "Amended and Prior-Year Returns",
+    description:
+      "Help reviewing earlier filings and preparing eligible amended, late, or prior-year returns.",
+    href: "/tax-services/amended-prior-year-tax-returns/",
+  },
+  {
+    title: "Multi-State Tax Preparation",
+    description:
+      "Preparation support when income, residence, work, business, or property involves multiple states.",
+    href: "/tax-services/multi-state-tax-preparation/",
+  },
+];
+
+const audiences = [
+  {
+    title: "Individuals and Families",
+    description:
+      "Personal tax preparation involving income, dependents, deductions, credits, and investments.",
+  },
+  {
+    title: "Self-Employed Professionals",
+    description:
+      "Support with business income, expenses, estimated payments, and filing requirements.",
+  },
+  {
+    title: "Small-Business Owners",
+    description:
+      "Business return preparation and planning for qualifying entities and owners.",
+  },
+  {
+    title: "Real Estate Investors",
+    description:
+      "Tax assistance involving rental income, expenses, depreciation, and property activity.",
+  },
+  {
+    title: "Corporations and Partnerships",
+    description:
+      "Preparation of qualifying corporate and partnership tax returns.",
+  },
+  {
+    title: "Multi-State Clients",
+    description:
+      "Support when residence, employment, business activity, or property involves several states.",
+  },
+];
+---
+
+<BaseLayout canonicalPath="/">
+  <section class="home-hero">
+    <div class="container home-hero__grid">
+      <div class="home-hero__content">
+        <p class="eyebrow">
+          Global Bash Tax Services
+        </p>
+
+        <h1>
+          Personalized Tax Preparation for Individuals
+          and Businesses
+        </h1>
+
+        <p class="home-hero__summary">
+          Work directly with Milana Bash, an
+          IRS-registered tax return preparer with more
+          than 20 years of experience assisting
+          individuals, self-employed professionals,
+          investors, and business owners.
+        </p>
+
+        <div class="button-group">
+          <a
+            class="button button--primary"
+            href="/book-tax-consultation/"
+          >
+            Book a Tax Consultation
+          </a>
+
+          <a
+            class="button button--secondary"
+            href="/tax-services/"
+          >
+            Explore Tax Services
+          </a>
+        </div>
+
+        <a
+          class="home-hero__phone"
+          href={site.phoneHref}
+        >
+          Call {site.phoneDisplay}
+        </a>
+      </div>
+
+      <picture class="home-hero__media">
+        <source
+          media="(max-width: 680px)"
+          srcset="/images/portraits/milana-bash-hero-mobile.webp"
+          type="image/webp"
+        />
+
+        <source
+          srcset="/images/portraits/milana-bash-hero-1600.webp"
+          type="image/webp"
+        />
+
+        <img
+          src="/images/portraits/milana-bash-hero-1600.jpg"
+          alt="Milana Bash, tax professional"
+          width="1600"
+          height="1200"
+          fetchpriority="high"
+        />
+      </picture>
+    </div>
+  </section>
+
+  <section
+    class="trust-strip"
+    aria-label="Practice highlights"
+  >
+    <div class="container trust-strip__grid">
+      <div>
+        <strong>20+ Years</strong>
+        <span>Tax preparation experience</span>
+      </div>
+
+      <div>
+        <strong>Personal Review</strong>
+        <span>Direct attention to your situation</span>
+      </div>
+
+      <div>
+        <strong>Remote Service</strong>
+        <span>No public office visit required</span>
+      </div>
+
+      <div>
+        <strong>Three Languages</strong>
+        <span>English, Bulgarian, and Turkish</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section home-introduction">
+    <div class="container content-narrow">
+      <p class="eyebrow">A Personal Approach</p>
+
+      <h2>
+        Tax Preparation Should Be More Than Data Entry
+      </h2>
+
+      <p>
+        Global Bash takes time to understand your income,
+        business activity, investments, filing history,
+        and questions before moving forward.
+      </p>
+
+      <p>
+        The goal is to prepare your tax work carefully,
+        identify applicable tax items, and help you better
+        understand decisions that may affect future years.
+      </p>
+
+      <a
+        class="text-link"
+        href="/book-tax-consultation/"
+      >
+        Discuss your tax situation
+      </a>
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="container">
+      <div class="home-section-heading">
+        <p class="eyebrow">Tax Services</p>
+
+        <h2>
+          Support for Individual and Business Tax Needs
+        </h2>
+
+        <p>
+          Personalized remote assistance based on your
+          filing requirements, business activity, income
+          sources, and tax concerns.
+        </p>
+      </div>
+
+      <div class="card-grid card-grid--three">
+        {
+          services.map((service) => (
+            <ServiceCard {...service} />
+          ))
+        }
+      </div>
+
+      <div class="home-section-action">
+        <a
+          class="button button--secondary"
+          href="/tax-services/"
+        >
+          View All Tax Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container home-split">
+      <div class="home-split__media">
+        <img
+          src="/images/about/milana-bash-about.webp"
+          alt="Milana Bash"
+          width="800"
+          height="1000"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="home-split__content">
+        <p class="eyebrow">Meet Milana Bash</p>
+
+        <h2>
+          Experienced Tax Guidance With Personal Attention
+        </h2>
+
+        <p>
+          Milana Bash is an IRS-registered tax return
+          preparer with more than 20 years of experience.
+          She holds a Master of Business Administration
+          and has a background in business administration,
+          marketing, and accounting.
+        </p>
+
+        <p>
+          Her practice has grown through referrals,
+          repeat clients, and long-term professional
+          relationships.
+        </p>
+
+        <a
+          class="button button--secondary"
+          href="/about-milana-bash/"
+        >
+          Learn More About Milana
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy">
+    <div class="container">
+      <div class="home-section-heading home-section-heading--light">
+        <p class="eyebrow">Who We Help</p>
+
+        <h2>
+          Tax Services Built Around Real Situations
+        </h2>
+      </div>
+
+      <div class="card-grid card-grid--three">
+        {
+          audiences.map((audience) => (
+            <AudienceCard {...audience} />
+          ))
+        }
+      </div>
+
+      <div class="home-section-action">
+        <a
+          class="button home-button--light"
+          href="/who-we-help/"
+        >
+          See Who We Help
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container home-split home-split--reverse">
+      <div class="home-split__media home-split__media--portrait">
+        <img
+          src="/images/services/milana-bash-real-estate-tax.jpg"
+          alt="Milana Bash in a professional real estate setting"
+          width="828"
+          height="1792"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="home-split__content">
+        <p class="eyebrow">
+          Real Estate Tax Experience
+        </p>
+
+        <h2>
+          Tax Support Informed by Real Estate Experience
+        </h2>
+
+        <p>
+          Milana’s background in both tax preparation and
+          real estate provides practical context when
+          working with property owners and real estate
+          investors.
+        </p>
+
+        <a
+          class="button button--secondary"
+          href="/tax-services/real-estate-investor-tax-services/"
+        >
+          Explore Real Estate Tax Services
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="container home-process">
+      <div class="home-section-heading">
+        <p class="eyebrow">How It Works</p>
+
+        <h2>
+          Start With a Tax Consultation
+        </h2>
+      </div>
+
+      <ol class="home-process__grid">
+        <li>
+          <span>01</span>
+          <h3>Tell Us What You Need</h3>
+          <p>
+            Provide a brief, non-sensitive description
+            of your tax needs.
+          </p>
+        </li>
+
+        <li>
+          <span>02</span>
+          <h3>Discuss Your Situation</h3>
+          <p>
+            Milana reviews the initial information and
+            contacts you about the next step.
+          </p>
+        </li>
+
+        <li>
+          <span>03</span>
+          <h3>Confirm the Service</h3>
+          <p>
+            Scope, required records, process, and pricing
+            are discussed.
+          </p>
+        </li>
+
+        <li>
+          <span>04</span>
+          <h3>Begin Securely</h3>
+          <p>
+            Secure document instructions are provided
+            after the engagement is confirmed.
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <ConsultationCta
+    heading="Get Personal Help With Your Tax Situation"
+    text="Whether you need help with an individual return, business filing, amended return, multi-state situation, real estate activity, or planning, the first step is a conversation."
+  />
+</BaseLayout>

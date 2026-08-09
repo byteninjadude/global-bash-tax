@@ -1,0 +1,159 @@
+---
+import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
+
+const sections = [
+  {
+    eyebrow: "Who This Service Is For",
+    title: "Tax Support for Property Owners and Investors",
+    bullets: [
+      "Residential rental-property owners",
+      "Multi-property investors",
+      "Short-term rental owners",
+      "Real estate professionals",
+      "Property owners with multi-state activity",
+      "People holding property through a business entity",
+      "Clients who purchased or sold investment property",
+      "Investors with depreciation questions",
+    ],
+  },
+  {
+    eyebrow: "Common Tax Areas",
+    title: "What Real Estate Tax Preparation May Involve",
+    bullets: [
+      "Rental income",
+      "Property operating expenses",
+      "Repairs and maintenance",
+      "Property-management fees",
+      "Mortgage interest",
+      "Insurance",
+      "Property taxes",
+      "Depreciation",
+      "Capital improvements",
+      "Asset reporting",
+      "Property sales",
+      "Passive-activity considerations",
+      "Multi-state filing",
+      "Entity-related reporting",
+    ],
+    note:
+      "The tax treatment of an expense, improvement, sale, or loss depends on the facts and applicable tax rules.",
+  },
+  {
+    eyebrow: "Depreciation",
+    title: "Property and Asset Records Matter",
+    paragraphs: [
+      "Depreciation can affect rental-property reporting over several years and may influence tax treatment when property is sold.",
+      "Clients should maintain purchase documents, closing statements, improvement records, prior depreciation schedules, and information about when the property was placed in service.",
+    ],
+  },
+  {
+    eyebrow: "Property Sales",
+    title: "A Sale May Require Additional Review",
+    paragraphs: [
+      "The sale of rental or investment property may involve basis, improvements, depreciation, selling expenses, prior use, and state filing considerations.",
+      "Clients should discuss a planned sale before year-end when possible.",
+      "Global Bash does not provide legal or investment advice.",
+    ],
+  },
+  {
+    eyebrow: "Real Estate Background",
+    title: "Tax Support Informed by Real Estate Experience",
+    paragraphs: [
+      "Milana’s background as both a tax professional and licensed real estate professional provides practical context when discussing rental activity, property records, transactions, and investor concerns.",
+      "Her real estate license is associated with Global Bash under license number 471019781.",
+    ],
+  },
+  {
+    eyebrow: "Remote Process",
+    title: "A Remote Process for Real Estate Tax Preparation",
+    steps: [
+      {
+        title: "Describe the Property Activity",
+        text:
+          "Identify property type, ownership, location, tax year, and whether it was purchased, rented, improved, or sold.",
+      },
+      {
+        title: "Review Property Records",
+        text:
+          "Milana identifies the income, expense, closing, asset, and depreciation records needed.",
+      },
+      {
+        title: "Confirm Scope and Pricing",
+        text:
+          "Fees are based on the number of properties, entities, states, transactions, and record complexity.",
+      },
+      {
+        title: "Provide Records Securely",
+        text:
+          "Property documents are submitted through the approved secure process.",
+      },
+      {
+        title: "Prepare Applicable Returns",
+        text:
+          "Federal, state, and entity-related filings are prepared as applicable.",
+      },
+    ],
+  },
+];
+
+const faqs = [
+  {
+    question: "What records should I keep for a rental property?",
+    answer:
+      "Common records include closing statements, rental income records, invoices, receipts, mortgage statements, insurance, property taxes, improvement records, mileage logs, and prior depreciation schedules.",
+  },
+  {
+    question: "Are repairs and improvements treated the same?",
+    answer:
+      "Not always. The tax treatment depends on the nature of the work and applicable capitalization rules.",
+  },
+  {
+    question: "Can you prepare returns for property in another state?",
+    answer:
+      "Multi-state property filings may be accepted depending on the states and overall complexity.",
+  },
+  {
+    question: "Do you provide real estate investment advice?",
+    answer:
+      "No. Tax services do not include legal, investment, appraisal, brokerage, or financial-planning advice.",
+  },
+];
+
+const relatedLinks = [
+  {
+    label: "Tax Planning",
+    href: "/tax-services/tax-planning/",
+  },
+  {
+    label: "Multi-State Tax Preparation",
+    href: "/tax-services/multi-state-tax-preparation/",
+  },
+  {
+    label: "Business Tax Preparation",
+    href: "/tax-services/business-tax-preparation/",
+  },
+  {
+    label: "Individual Tax Preparation",
+    href: "/tax-services/individual-tax-preparation/",
+  },
+];
+---
+
+<ServicePageLayout
+  title="Real Estate Investor Tax Services | Global Bash"
+  description="Remote tax preparation and planning support for rental-property owners, real estate professionals, and property investors."
+  canonicalPath="/tax-services/real-estate-investor-tax-services/"
+  eyebrow="Real Estate Investor Tax Services"
+  heading="Tax Support for Rental Property and Real Estate Activity"
+  introduction={[
+    "Rental income, expenses, depreciation, property sales, business entities, and multi-state ownership can make real estate tax reporting more complex.",
+    "Global Bash provides personalized remote tax preparation informed by Milana’s experience in both tax and real estate.",
+  ]}
+  primaryCtaLabel="Request Real Estate Tax Help"
+  primaryCtaHref="/book-tax-consultation/?service=real-estate-investor-tax"
+  sections={sections}
+  faqs={faqs}
+  relatedLinks={relatedLinks}
+  finalCtaHeading="Discuss Your Real Estate Tax Needs"
+  finalCtaText="Provide a general description of the property, state, ownership, tax year, and activity involved."
+/>

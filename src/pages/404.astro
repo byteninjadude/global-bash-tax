@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../config/site";
+---
+
+<BaseLayout
+  title="Page Not Found | Global Bash Tax Services"
+  description="The requested Global Bash Tax Services page could not be found."
+  canonicalPath={null}
+  noindex={true}
+>
+  <section class="not-found-page">
+    <div class="container content-narrow">
+      <p class="eyebrow">
+        Page Not Found
+      </p>
+
+      <h1>
+        We Could Not Find That Page
+      </h1>
+
+      <p>
+        The page may have moved, the address may contain
+        an error, or the content may no longer be
+        available.
+      </p>
+
+      <div class="button-group">
+        <a
+          class="button button--primary"
+          href="/"
+        >
+          Return to Home
+        </a>
+
+        <a
+          class="button button--secondary"
+          href="/tax-services/"
+        >
+          View Tax Services
+        </a>
+      </div>
+
+      <p>
+        Need assistance?
+        <a href={site.phoneHref}>
+          Call {site.phoneDisplay}
+        </a>
+        or
+        <a href={`mailto:${site.email}`}>
+          email {site.email}
+        </a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

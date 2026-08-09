@@ -1,0 +1,306 @@
+---
+import TurnstileWidget from "./TurnstileWidget.astro";
+
+const selectedService =
+  Astro.url.searchParams.get("service") ?? "";
+
+const serviceOptions = [
+  {
+    value: "individual-tax-preparation",
+    label: "Individual tax preparation",
+  },
+  {
+    value: "business-tax-preparation",
+    label: "Business tax preparation",
+  },
+  {
+    value: "tax-planning",
+    label: "Tax planning",
+  },
+  {
+    value: "self-employed-tax-services",
+    label: "Self-employed tax services",
+  },
+  {
+    value: "amended-return",
+    label: "Amended return",
+  },
+  {
+    value: "prior-year-return",
+    label: "Prior-year or late return",
+  },
+  {
+    value: "multi-state-tax-preparation",
+    label: "Multi-state tax preparation",
+  },
+  {
+    value: "real-estate-investor-tax",
+    label: "Real estate investor tax services",
+  },
+  {
+    value: "tax-notice-assistance",
+    label: "Tax notice assistance",
+  },
+  {
+    value: "not-sure",
+    label: "Not sure",
+  },
+];
+---
+
+<form
+  class="site-form"
+  method="post"
+  action="/api/consultation"
+>
+  <div class="form-grid form-grid--two">
+    <div class="form-field">
+      <label for="consultation-first-name">
+        First name
+        <span aria-hidden="true">*</span>
+      </label>
+
+      <input
+        id="consultation-first-name"
+        name="firstName"
+        type="text"
+        autocomplete="given-name"
+        maxlength="60"
+        required
+      />
+    </div>
+
+    <div class="form-field">
+      <label for="consultation-last-name">
+        Last name
+        <span aria-hidden="true">*</span>
+      </label>
+
+      <input
+        id="consultation-last-name"
+        name="lastName"
+        type="text"
+        autocomplete="family-name"
+        maxlength="60"
+        required
+      />
+    </div>
+  </div>
+
+  <div class="form-grid form-grid--two">
+    <div class="form-field">
+      <label for="consultation-email">
+        Email
+        <span aria-hidden="true">*</span>
+      </label>
+
+      <input
+        id="consultation-email"
+        name="email"
+        type="email"
+        autocomplete="email"
+        maxlength="160"
+        required
+      />
+    </div>
+
+    <div class="form-field">
+      <label for="consultation-phone">
+        Phone
+        <span aria-hidden="true">*</span>
+      </label>
+
+      <input
+        id="consultation-phone"
+        name="phone"
+        type="tel"
+        autocomplete="tel"
+        maxlength="30"
+        required
+      />
+    </div>
+  </div>
+
+  <div class="form-grid form-grid--two">
+    <div class="form-field">
+      <label for="consultation-contact-method">
+        Preferred contact method
+      </label>
+
+      <select
+        id="consultation-contact-method"
+        name="contactMethod"
+      >
+        <option value="phone">Phone</option>
+        <option value="email">Email</option>
+      </select>
+    </div>
+
+    <div class="form-field">
+      <label for="consultation-language">
+        Preferred language
+      </label>
+
+      <select
+        id="consultation-language"
+        name="language"
+      >
+        <option value="english">English</option>
+        <option value="bulgarian">Bulgarian</option>
+        <option value="turkish">Turkish</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-grid form-grid--two">
+    <div class="form-field">
+      <label for="consultation-client-type">
+        Client type
+      </label>
+
+      <select
+        id="consultation-client-type"
+        name="clientType"
+      >
+        <option value="individual">
+          Individual or family
+        </option>
+
+        <option value="self-employed">
+          Self-employed
+        </option>
+
+        <option value="business">
+          Business
+        </option>
+
+        <option value="real-estate-investor">
+          Real estate investor
+        </option>
+
+        <option value="other">
+          Other
+        </option>
+      </select>
+    </div>
+
+    <div class="form-field">
+      <label for="consultation-service">
+        Service needed
+        <span aria-hidden="true">*</span>
+      </label>
+
+      <select
+        id="consultation-service"
+        name="service"
+        required
+      >
+        <option value="">
+          Select a service
+        </option>
+
+        {
+          serviceOptions.map((option) => (
+            <option
+              value={option.value}
+              selected={
+                selectedService === option.value
+              }
+            >
+              {option.label}
+            </option>
+          ))
+        }
+      </select>
+    </div>
+  </div>
+
+  <div class="form-grid form-grid--two">
+    <div class="form-field">
+      <label for="consultation-tax-years">
+        Tax year or years
+      </label>
+
+      <input
+        id="consultation-tax-years"
+        name="taxYears"
+        type="text"
+        maxlength="100"
+        placeholder="Example: 2025 or 2023–2025"
+      />
+    </div>
+
+    <div class="form-field">
+      <label for="consultation-states">
+        State or states involved
+      </label>
+
+      <input
+        id="consultation-states"
+        name="states"
+        type="text"
+        maxlength="160"
+        placeholder="Example: Illinois and Florida"
+      />
+    </div>
+  </div>
+
+  <div class="form-field">
+    <label for="consultation-message">
+      Brief description
+      <span aria-hidden="true">*</span>
+    </label>
+
+    <textarea
+      id="consultation-message"
+      name="message"
+      rows="7"
+      maxlength="3000"
+      required
+    ></textarea>
+
+    <p class="form-help">
+      Provide only a general description. Do not enter
+      Social Security numbers, tax-document details,
+      banking information, or other sensitive data.
+    </p>
+  </div>
+
+  <div class="honeypot" aria-hidden="true">
+    <label for="consultation-company">
+      Company website
+    </label>
+
+    <input
+      id="consultation-company"
+      name="company"
+      type="text"
+      tabindex="-1"
+      autocomplete="off"
+    />
+  </div>
+
+  <TurnstileWidget />
+
+  <label class="consent-field">
+    <input
+      name="consent"
+      type="checkbox"
+      value="yes"
+      required
+    />
+
+    <span>
+      I agree that Global Bash may contact me by phone or
+      email regarding this request. Submitting this form
+      does not create a client relationship.
+    </span>
+  </label>
+
+  <button
+    class="button button--primary"
+    type="submit"
+  >
+    Request Consultation
+  </button>
+</form>

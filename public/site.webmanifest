@@ -1,0 +1,21 @@
+{
+  "name": "Global Bash Tax Services",
+  "short_name": "Global Bash Tax",
+  "description": "Personalized remote tax preparation and planning with Milana Bash.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fcfbf8",
+  "theme_color": "#0b1f33",
+  "icons": [
+    {
+      "src": "/images/branding/global-bash-favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/images/branding/global-bash-favicon-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

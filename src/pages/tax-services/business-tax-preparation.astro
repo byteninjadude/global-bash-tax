@@ -1,0 +1,220 @@
+---
+import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
+
+const sections = [
+  {
+    eyebrow: "Business Structures",
+    title:
+      "Tax Preparation for Different Business Structures",
+    cards: [
+      {
+        title: "Sole Proprietors",
+        text:
+          "Business income and expenses are generally reported through Schedule C with the owner’s individual return.",
+      },
+      {
+        title: "Partnerships",
+        text:
+          "Form 1065 preparation and applicable Schedule K-1 reporting for partners.",
+      },
+      {
+        title: "S Corporations",
+        text:
+          "Form 1120S preparation and applicable shareholder reporting.",
+      },
+      {
+        title: "C Corporations",
+        text:
+          "Form 1120 preparation and related federal and state filing requirements.",
+      },
+      {
+        title: "Limited Liability Companies",
+        text:
+          "The filing requirement depends on how the LLC is classified for federal and state tax purposes.",
+      },
+    ],
+  },
+  {
+    eyebrow: "What May Be Included",
+    title: "Business Return Preparation May Involve",
+    bullets: [
+      "Business income",
+      "Ordinary and necessary business expenses",
+      "Cost of goods sold",
+      "Contractor-payment information",
+      "Vehicle use",
+      "Home-office information",
+      "Business assets",
+      "Depreciation",
+      "Estimated payments",
+      "Shareholder or partner information",
+      "Schedule K-1 preparation",
+      "Applicable state filings",
+      "Multi-state business activity",
+      "Prior-year filing issues",
+    ],
+    note:
+      "The exact scope depends on the business entity, filing requirements, ownership structure, states involved, and condition of the records provided.",
+  },
+  {
+    eyebrow: "Record Preparation",
+    title:
+      "Organized Business Records Support Accurate Filing",
+    paragraphs: [
+      "Business owners should maintain records that support the income, expenses, assets, and owner-related activity reported on the return.",
+      "Global Bash may request additional documentation depending on the entity and filing requirements.",
+    ],
+    bullets: [
+      "Income received",
+      "Business expenses",
+      "Contractor payments",
+      "Payroll information when applicable",
+      "Business mileage and vehicle use",
+      "Asset purchases",
+      "Loans and financing",
+      "Owner contributions and distributions",
+      "Inventory",
+      "Business activity in other states",
+      "Prior-year balances",
+    ],
+  },
+  {
+    eyebrow: "Planning",
+    title:
+      "Tax Preparation and Planning Work Better Together",
+    paragraphs: [
+      "A business return reports activity that has already occurred. Tax planning helps business owners consider estimated payments, recordkeeping needs, major purchases, income timing, and other future decisions before the next filing deadline.",
+      "Planning does not guarantee that taxes will be reduced. Its purpose is to help business owners understand possible consequences and prepare more effectively.",
+    ],
+    relatedLink: {
+      label: "Explore Tax Planning Services",
+      href: "/tax-services/tax-planning/",
+    },
+  },
+  {
+    eyebrow: "Remote Process",
+    title: "A Clear Remote Preparation Process",
+    steps: [
+      {
+        title: "Initial Consultation",
+        text:
+          "Discuss the business structure, tax year, states involved, and filing needs.",
+      },
+      {
+        title: "Scope Review",
+        text:
+          "Milana identifies the likely return type and general records required.",
+      },
+      {
+        title: "Engagement and Pricing",
+        text:
+          "The scope and pricing are confirmed based on the complexity of the business return.",
+      },
+      {
+        title: "Secure Document Collection",
+        text:
+          "Business records are provided through the approved secure process.",
+      },
+      {
+        title: "Preparation and Questions",
+        text:
+          "Milana reviews the records and follows up regarding missing or unclear information.",
+      },
+      {
+        title: "Completion",
+        text:
+          "The business return and applicable owner, shareholder, or partner documents are completed.",
+      },
+    ],
+  },
+  {
+    eyebrow: "Service Boundaries",
+    title: "Important Business-Service Boundaries",
+    paragraphs: [
+      "Business tax preparation does not automatically include the following services:",
+    ],
+    bullets: [
+      "Bookkeeping",
+      "Payroll processing",
+      "Sales-tax registration or filing",
+      "Legal entity formation",
+      "Legal advice",
+      "Investment advice",
+      "IRS audit representation",
+      "Ongoing accounting services",
+    ],
+  },
+];
+
+const faqs = [
+  {
+    question:
+      "Which business tax returns do you prepare?",
+    answer:
+      "Global Bash prepares qualifying Forms 1120, 1120S, 1065, Schedule C filings, and applicable state returns.",
+  },
+  {
+    question:
+      "Can you help me decide whether to elect S-corporation status?",
+    answer:
+      "Milana can discuss general tax considerations connected with different filing structures. Legal formation and liability questions should be reviewed with an appropriate attorney.",
+  },
+  {
+    question: "Do you provide bookkeeping?",
+    answer:
+      "Bookkeeping is not currently advertised as a confirmed standalone service.",
+  },
+  {
+    question: "Do you process payroll?",
+    answer:
+      "Payroll processing and broader payroll-service scope are not currently advertised.",
+  },
+  {
+    question:
+      "How much does a business return cost?",
+    answer:
+      "Pricing depends on the entity, condition of the records, ownership structure, required schedules, assets, number of states involved, and overall complexity.",
+  },
+];
+
+const relatedLinks = [
+  {
+    label: "Tax Planning",
+    href: "/tax-services/tax-planning/",
+  },
+  {
+    label: "Self-Employed Tax Services",
+    href:
+      "/tax-services/self-employed-tax-services/",
+  },
+  {
+    label: "Multi-State Tax Preparation",
+    href:
+      "/tax-services/multi-state-tax-preparation/",
+  },
+  {
+    label: "Real Estate Investor Tax Services",
+    href:
+      "/tax-services/real-estate-investor-tax-services/",
+  },
+];
+---
+
+<ServicePageLayout
+  title="Business Tax Preparation Services | Global Bash"
+  description="Remote business tax preparation for qualifying corporations, S corporations, partnerships, LLCs, and self-employed business owners with Global Bash."
+  canonicalPath="/tax-services/business-tax-preparation/"
+  eyebrow="Business Tax Preparation"
+  heading="Business Tax Preparation With Personal Guidance"
+  introduction={[
+    "Business tax returns require accurate income and expense reporting, organized records, entity-specific forms, and attention to filing deadlines.",
+    "Global Bash provides remote tax preparation for qualifying businesses and owners who want direct communication and professional review.",
+  ]}
+  primaryCtaLabel="Request a Business Tax Consultation"
+  primaryCtaHref="/book-tax-consultation/?service=business-tax-preparation"
+  sections={sections}
+  faqs={faqs}
+  relatedLinks={relatedLinks}
+  finalCtaHeading="Discuss Your Business Tax Needs"
+  finalCtaText="Request a consultation to discuss your entity, tax year, return type, business records, states involved, and filing requirements."
+/>

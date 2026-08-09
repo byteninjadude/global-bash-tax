@@ -1,0 +1,132 @@
+---
+import TurnstileWidget from "./TurnstileWidget.astro";
+---
+
+<form
+  class="site-form"
+  method="post"
+  action="/api/contact"
+>
+  <div class="form-grid form-grid--two">
+    <div class="form-field">
+      <label for="contact-name">
+        Name
+        <span aria-hidden="true">*</span>
+      </label>
+
+      <input
+        id="contact-name"
+        name="name"
+        type="text"
+        autocomplete="name"
+        maxlength="100"
+        required
+      />
+    </div>
+
+    <div class="form-field">
+      <label for="contact-email">
+        Email
+        <span aria-hidden="true">*</span>
+      </label>
+
+      <input
+        id="contact-email"
+        name="email"
+        type="email"
+        autocomplete="email"
+        maxlength="160"
+        required
+      />
+    </div>
+  </div>
+
+  <div class="form-grid form-grid--two">
+    <div class="form-field">
+      <label for="contact-phone">
+        Phone
+      </label>
+
+      <input
+        id="contact-phone"
+        name="phone"
+        type="tel"
+        autocomplete="tel"
+        maxlength="30"
+      />
+    </div>
+
+    <div class="form-field">
+      <label for="contact-subject">
+        Subject
+        <span aria-hidden="true">*</span>
+      </label>
+
+      <input
+        id="contact-subject"
+        name="subject"
+        type="text"
+        maxlength="140"
+        required
+      />
+    </div>
+  </div>
+
+  <div class="form-field">
+    <label for="contact-message">
+      Message
+      <span aria-hidden="true">*</span>
+    </label>
+
+    <textarea
+      id="contact-message"
+      name="message"
+      rows="7"
+      maxlength="3000"
+      required
+    ></textarea>
+
+    <p class="form-help">
+      Do not include Social Security numbers, banking
+      information, tax documents, or other sensitive data.
+    </p>
+  </div>
+
+  <div class="honeypot" aria-hidden="true">
+    <label for="contact-company">
+      Company website
+    </label>
+
+    <input
+      id="contact-company"
+      name="company"
+      type="text"
+      tabindex="-1"
+      autocomplete="off"
+    />
+  </div>
+
+  <TurnstileWidget />
+
+  <label class="consent-field">
+    <input
+      name="consent"
+      type="checkbox"
+      value="yes"
+      required
+    />
+
+    <span>
+      I agree that Global Bash may contact me by phone or
+      email regarding this inquiry. Submitting this form
+      does not create a client relationship.
+    </span>
+  </label>
+
+  <button
+    class="button button--primary"
+    type="submit"
+  >
+    Send Message
+  </button>
+</form>

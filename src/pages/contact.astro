@@ -1,0 +1,102 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import ContactForm from "../components/ContactForm.astro";
+import { site } from "../config/site";
+---
+
+<BaseLayout
+  title="Contact Global Bash Tax Services"
+  description="Contact Milana Bash and Global Bash Tax Services by phone, email, or secure website inquiry."
+  canonicalPath="/contact/"
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Contact" },
+        ]}
+      />
+
+      <div class="page-hero__content">
+        <p class="eyebrow">
+          Contact Global Bash
+        </p>
+
+        <h1>
+          Contact Milana About Your Tax Needs
+        </h1>
+
+        <p>
+          Use the form for general questions, or request
+          a consultation if you already know which tax
+          service you need.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-layout">
+      <div class="contact-layout__details">
+        <p class="eyebrow">
+          Contact Information
+        </p>
+
+        <h2>
+          Remote Tax Assistance
+        </h2>
+
+        <div class="contact-method">
+          <h3>Phone</h3>
+
+          <a href={site.phoneHref}>
+            {site.phoneDisplay}
+          </a>
+        </div>
+
+        <div class="contact-method">
+          <h3>Email</h3>
+
+          <a href={`mailto:${site.email}`}>
+            {site.email}
+          </a>
+        </div>
+
+        <div class="contact-method">
+          <h3>Languages</h3>
+
+          <p>
+            English, Bulgarian, and Turkish
+          </p>
+        </div>
+
+        <div class="contact-method">
+          <h3>Service Model</h3>
+
+          <p>
+            Fully remote. No public walk-in office.
+          </p>
+        </div>
+
+        <aside class="information-note">
+          <p>
+            Do not send Social Security numbers, tax
+            documents, banking details, or other sensitive
+            personal information through this form or
+            regular email.
+          </p>
+        </aside>
+      </div>
+
+      <div class="contact-layout__form">
+        <h2>
+          Send a General Message
+        </h2>
+
+        <ContactForm />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

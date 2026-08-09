@@ -1,0 +1,57 @@
+---
+import LegalPageLayout from "../layouts/LegalPageLayout.astro";
+import { site } from "../config/site";
+---
+
+<LegalPageLayout
+  title="Accessibility Statement | Global Bash Tax Services"
+  description="Accessibility commitment and contact information for the Global Bash Tax Services website."
+  heading="Accessibility Statement"
+  canonicalPath="/accessibility/"
+  effectiveDate="August 9, 2026"
+>
+  <p>
+    Global Bash is committed to making its website usable
+    by as many people as reasonably possible, including
+    visitors who use assistive technologies.
+  </p>
+
+  <h2>Accessibility Measures</h2>
+
+  <ul>
+    <li>Keyboard-accessible navigation and forms</li>
+    <li>Visible keyboard-focus indicators</li>
+    <li>Descriptive page titles and headings</li>
+    <li>Text labels for form controls</li>
+    <li>Alternative text for meaningful images</li>
+    <li>Responsive layouts for different screen sizes</li>
+    <li>A skip link for bypassing repeated navigation</li>
+  </ul>
+
+  <h2>Ongoing Review</h2>
+
+  <p>
+    Accessibility is an ongoing process. The website will
+    be reviewed as pages, forms, components, and
+    technologies change.
+  </p>
+
+  <h2>Requesting Assistance</h2>
+
+  <p>
+    Contact Global Bash if you have difficulty accessing
+    information or using a website feature.
+  </p>
+
+  <address>
+    Email:
+    <a href={`mailto:${site.email}`}>
+      {site.email}
+    </a><br />
+
+    Phone:
+    <a href={site.phoneHref}>
+      {site.phoneDisplay}
+    </a>
+  </address>
+</LegalPageLayout>

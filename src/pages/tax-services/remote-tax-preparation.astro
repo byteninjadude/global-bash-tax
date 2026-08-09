@@ -1,0 +1,151 @@
+---
+import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
+
+const sections = [
+  {
+    eyebrow: "How It Works",
+    title: "Complete the Tax Process Without Visiting an Office",
+    paragraphs: [
+      "Global Bash operates as a fully remote tax practice.",
+      "Clients begin through the consultation form, phone, or email. After the service and engagement are confirmed, Milana provides instructions for the appropriate secure document process.",
+    ],
+  },
+  {
+    eyebrow: "Who Remote Service Helps",
+    title: "Convenient Tax Support for Busy Clients",
+    bullets: [
+      "Individuals and families",
+      "Self-employed professionals",
+      "Business owners",
+      "Real estate investors",
+      "Clients who travel frequently",
+      "Clients living outside Milana’s immediate area",
+      "Clients with multi-state tax needs",
+      "Clients who prefer phone or virtual communication",
+    ],
+  },
+  {
+    eyebrow: "Remote Process",
+    title: "The Remote Tax Preparation Process",
+    steps: [
+      {
+        title: "Request a Consultation",
+        text:
+          "Submit a general description of the tax service needed.",
+      },
+      {
+        title: "Discuss Filing Needs",
+        text:
+          "Milana reviews the tax year, return type, states, business activity, and timing.",
+      },
+      {
+        title: "Confirm Scope and Pricing",
+        text:
+          "The work, required records, process, and fees are discussed.",
+      },
+      {
+        title: "Receive Secure Instructions",
+        text:
+          "Tax documents are provided only through the approved secure method.",
+      },
+      {
+        title: "Answer Follow-Up Questions",
+        text:
+          "Milana contacts the client when information is missing or clarification is needed.",
+      },
+      {
+        title: "Review and Complete",
+        text:
+          "The applicable return is completed after required review and client communication.",
+      },
+    ],
+  },
+  {
+    eyebrow: "Security",
+    title: "Sensitive Tax Information Requires a Secure Process",
+    paragraphs: [
+      "The public website forms are only for general inquiries and consultation requests.",
+      "Do not submit Social Security numbers, tax forms, banking information, identification documents, or other sensitive information through a public form or regular email.",
+    ],
+    note:
+      "The secure document-platform link will be added after the approved system is selected.",
+  },
+  {
+    eyebrow: "Service Availability",
+    title: "Based in Illinois and Florida",
+    paragraphs: [
+      "Milana is based in Illinois and Florida and works remotely with clients whose tax needs fall within the confirmed services of the practice.",
+      "Acceptance depends on the states, tax years, forms, records, deadlines, and complexity involved.",
+    ],
+  },
+  {
+    eyebrow: "Languages",
+    title: "Service in English, Bulgarian, and Turkish",
+    paragraphs: [
+      "Clients may request communication in English, Bulgarian, or Turkish.",
+      "The website is currently published in English while multilingual service availability is identified throughout the site.",
+    ],
+  },
+];
+
+const faqs = [
+  {
+    question: "Do I ever need to visit an office?",
+    answer:
+      "No public walk-in office is advertised. The process is designed to be completed remotely.",
+  },
+  {
+    question: "How do I send my tax documents?",
+    answer:
+      "Secure instructions are provided after the engagement is confirmed. Do not use the public contact form or regular email for sensitive documents.",
+  },
+  {
+    question: "Can you work with clients outside Illinois or Florida?",
+    answer:
+      "Remote returns may be accepted depending on the states involved, filing requirements, and complexity of the situation.",
+  },
+  {
+    question: "Can I request service in Bulgarian or Turkish?",
+    answer:
+      "Yes. Services are available in English, Bulgarian, and Turkish.",
+  },
+];
+
+const relatedLinks = [
+  {
+    label: "Individual Tax Preparation",
+    href: "/tax-services/individual-tax-preparation/",
+  },
+  {
+    label: "Business Tax Preparation",
+    href: "/tax-services/business-tax-preparation/",
+  },
+  {
+    label: "Multi-State Tax Preparation",
+    href: "/tax-services/multi-state-tax-preparation/",
+  },
+  {
+    label: "Book a Tax Consultation",
+    href: "/book-tax-consultation/",
+  },
+];
+---
+
+<ServicePageLayout
+  title="Remote Tax Preparation Services | Global Bash"
+  description="Fully remote tax preparation for individuals, self-employed professionals, investors, and qualifying businesses."
+  canonicalPath="/tax-services/remote-tax-preparation/"
+  eyebrow="Remote Tax Preparation"
+  heading="Professional Tax Help Without an Office Visit"
+  introduction={[
+    "Global Bash provides a remote tax-preparation process designed for clients who value convenience, direct communication, and personal professional attention.",
+    "Milana works with clients by phone, email, virtual communication, and an approved secure document process after engagement.",
+  ]}
+  primaryCtaLabel="Request Remote Tax Preparation"
+  primaryCtaHref="/book-tax-consultation/?service=not-sure"
+  sections={sections}
+  faqs={faqs}
+  relatedLinks={relatedLinks}
+  finalCtaHeading="Start Your Remote Tax Consultation"
+  finalCtaText="Describe the service you need without including Social Security numbers, tax documents, or other sensitive information."
+/>

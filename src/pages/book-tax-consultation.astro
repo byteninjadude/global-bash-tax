@@ -1,0 +1,113 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import ConsultationForm from "../components/ConsultationForm.astro";
+import { site } from "../config/site";
+---
+
+<BaseLayout
+  title="Book a Tax Consultation | Global Bash"
+  description="Request a remote tax consultation with Milana Bash for individual returns, business taxes, planning, amended filings, or multi-state tax needs."
+  canonicalPath="/book-tax-consultation/"
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Book a Tax Consultation" },
+        ]}
+      />
+
+      <div class="page-hero__content">
+        <p class="eyebrow">
+          Get Started
+        </p>
+
+        <h1>
+          Request a Tax Consultation
+        </h1>
+
+        <p>
+          Provide a general description of your tax
+          needs. Milana will review your inquiry and
+          contact you about the appropriate next step.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container consultation-layout">
+      <div class="consultation-layout__form">
+        <h2>
+          Tell Us About Your Tax Needs
+        </h2>
+
+        <ConsultationForm />
+      </div>
+
+      <aside class="consultation-layout__sidebar">
+        <h2>
+          What Happens Next?
+        </h2>
+
+        <ol class="sidebar-steps">
+          <li>
+            <strong>
+              Your inquiry is reviewed.
+            </strong>
+
+            <span>
+              Milana reviews the general information
+              submitted through the form.
+            </span>
+          </li>
+
+          <li>
+            <strong>
+              You are contacted.
+            </strong>
+
+            <span>
+              The tax year, service, states involved,
+              and filing needs are discussed.
+            </span>
+          </li>
+
+          <li>
+            <strong>
+              Scope and pricing are confirmed.
+            </strong>
+
+            <span>
+              Fees depend on the complexity and work
+              required.
+            </span>
+          </li>
+
+          <li>
+            <strong>
+              Secure instructions are provided.
+            </strong>
+
+            <span>
+              Do not submit tax documents until you
+              receive the approved secure process.
+            </span>
+          </li>
+        </ol>
+
+        <div class="sidebar-contact">
+          <h3>
+            Prefer to Call?
+          </h3>
+
+          <a href={site.phoneHref}>
+            {site.phoneDisplay}
+          </a>
+        </div>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

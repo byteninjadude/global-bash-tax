@@ -1,0 +1,272 @@
+---
+import {
+  primaryNavigation,
+  serviceNavigation,
+  site,
+} from "../config/site";
+
+const currentPath = Astro.url.pathname;
+---
+
+<div class="announcement-bar">
+  <div class="container announcement-bar__inner">
+    <p>
+      Remote tax services in English, Bulgarian,
+      and Turkish.
+    </p>
+
+    <a href={site.phoneHref}>
+      Call {site.phoneDisplay}
+    </a>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a
+      class="site-logo"
+      href="/"
+      aria-label="Global Bash Tax Services home"
+    >
+      <img
+        src="/images/branding/global-bash-tax-logo-dark.svg"
+        alt="Global Bash Tax Services"
+        width="185"
+        height="95"
+      />
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="primary-navigation"
+      data-menu-toggle
+    >
+      <span class="sr-only">
+        Open main navigation
+      </span>
+
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </button>
+
+    <nav
+      class="primary-navigation"
+      id="primary-navigation"
+      aria-label="Primary navigation"
+      data-navigation
+    >
+      <ul class="primary-navigation__list">
+        {
+          primaryNavigation.map((item) => {
+            const exactCurrent =
+              currentPath === item.href;
+
+            const sectionActive =
+              item.href !== "/" &&
+              currentPath.startsWith(item.href);
+
+            if (item.href === "/tax-services/") {
+              return (
+                <li class="nav-item nav-item--submenu">
+                  <div class="nav-parent">
+                    <a
+                      href={item.href}
+                      class:list={[
+                        sectionActive &&
+                          "nav-link--section-active",
+                      ]}
+                      aria-current={
+                        exactCurrent
+                          ? "page"
+                          : undefined
+                      }
+                    >
+                      {item.label}
+                    </a>
+
+                    <button
+                      class="submenu-toggle"
+                      type="button"
+                      aria-expanded="false"
+                      aria-controls="tax-services-submenu"
+                      data-submenu-toggle
+                    >
+                      <span class="sr-only">
+                        Show tax service pages
+                      </span>
+
+                      <span aria-hidden="true">
+                        ▾
+                      </span>
+                    </button>
+                  </div>
+
+                  <ul
+                    class="nav-submenu"
+                    id="tax-services-submenu"
+                    data-submenu
+                    hidden
+                  >
+                    {
+                      serviceNavigation.map(
+                        (service) => (
+                          <li>
+                            <a
+                              href={service.href}
+                              aria-current={
+                                currentPath ===
+                                service.href
+                                  ? "page"
+                                  : undefined
+                              }
+                            >
+                              {service.label}
+                            </a>
+                          </li>
+                        ),
+                      )
+                    }
+                  </ul>
+                </li>
+              );
+            }
+
+            return (
+              <li class="nav-item">
+                <a
+                  href={item.href}
+                  aria-current={
+                    exactCurrent
+                      ? "page"
+                      : undefined
+                  }
+                >
+                  {item.label}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+
+      <a
+        class="button button--primary header-consultation"
+        href="/book-tax-consultation/"
+      >
+        Book a Consultation
+      </a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const menuToggle =
+    document.querySelector("[data-menu-toggle]");
+
+  const navigation =
+    document.querySelector("[data-navigation]");
+
+  const submenuToggle =
+    document.querySelector("[data-submenu-toggle]");
+
+  const submenu =
+    document.querySelector("[data-submenu]");
+
+  function closeSubmenu() {
+    if (
+      submenuToggle instanceof HTMLButtonElement &&
+      submenu instanceof HTMLElement
+    ) {
+      submenuToggle.setAttribute(
+        "aria-expanded",
+        "false",
+      );
+
+      submenu.hidden = true;
+    }
+  }
+
+  function closeMobileMenu() {
+    if (
+      menuToggle instanceof HTMLButtonElement &&
+      navigation instanceof HTMLElement
+    ) {
+      menuToggle.setAttribute(
+        "aria-expanded",
+        "false",
+      );
+
+      navigation.removeAttribute("data-open");
+
+      document.body.classList.remove(
+        "navigation-open",
+      );
+    }
+
+    closeSubmenu();
+  }
+
+  if (
+    menuToggle instanceof HTMLButtonElement &&
+    navigation instanceof HTMLElement
+  ) {
+    menuToggle.addEventListener("click", () => {
+      const expanded =
+        menuToggle.getAttribute(
+          "aria-expanded",
+        ) === "true";
+
+      menuToggle.setAttribute(
+        "aria-expanded",
+        String(!expanded),
+      );
+
+      navigation.toggleAttribute(
+        "data-open",
+        !expanded,
+      );
+
+      document.body.classList.toggle(
+        "navigation-open",
+        !expanded,
+      );
+    });
+  }
+
+  if (
+    submenuToggle instanceof HTMLButtonElement &&
+    submenu instanceof HTMLElement
+  ) {
+    submenuToggle.addEventListener("click", () => {
+      const expanded =
+        submenuToggle.getAttribute(
+          "aria-expanded",
+        ) === "true";
+
+      submenuToggle.setAttribute(
+        "aria-expanded",
+        String(!expanded),
+      );
+
+      submenu.hidden = expanded;
+    });
+  }
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMobileMenu();
+    }
+  });
+
+  navigation
+    ?.querySelectorAll("a")
+    .forEach((link) => {
+      link.addEventListener(
+        "click",
+        closeMobileMenu,
+      );
+    });
+</script>

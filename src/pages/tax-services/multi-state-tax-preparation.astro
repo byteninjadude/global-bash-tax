@@ -1,0 +1,158 @@
+---
+import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
+
+const sections = [
+  {
+    eyebrow: "Common Situations",
+    title: "When More Than One State May Be Involved",
+    bullets: [
+      "Moving during the tax year",
+      "Living in one state and working in another",
+      "Remote employment",
+      "Business activity in several states",
+      "Rental property in another state",
+      "Part-year residency",
+      "Nonresident income",
+      "Partnership or S-corporation income from another state",
+      "Temporary work assignments",
+      "Property transactions across state lines",
+    ],
+  },
+  {
+    eyebrow: "Residence and Income",
+    title: "State Filing Rules Depend on the Facts",
+    paragraphs: [
+      "State filing may depend on residency, domicile, where income was earned, where a business operates, where property is located, and whether taxes were withheld in another state.",
+      "A client may need resident, part-year resident, or nonresident returns depending on the situation.",
+      "The rules differ by state, so each combination of states must be reviewed individually.",
+    ],
+  },
+  {
+    eyebrow: "Remote Work",
+    title: "Remote Employment Can Create State Questions",
+    paragraphs: [
+      "Working remotely does not always mean income is taxable only in the state where the employee is physically located.",
+      "Employer location, withholding, residency, work location, and state-specific rules may affect filing requirements.",
+    ],
+  },
+  {
+    eyebrow: "Real Estate and Business",
+    title: "Property and Business Activity May Create Additional Returns",
+    paragraphs: [
+      "Rental property, business operations, partnership income, corporate activity, or other income connected with a state may create a filing requirement even when the client does not live there.",
+    ],
+    relatedLink: {
+      label: "Explore Real Estate Investor Tax Services",
+      href: "/tax-services/real-estate-investor-tax-services/",
+    },
+  },
+  {
+    eyebrow: "Information Needed",
+    title: "Records Commonly Required for Multi-State Preparation",
+    bullets: [
+      "Dates of residence in each state",
+      "Addresses used during the year",
+      "Work locations",
+      "Forms W-2 and 1099",
+      "State withholding",
+      "Business locations and activity",
+      "Rental-property locations",
+      "Partnership or shareholder statements",
+      "Prior-year state returns",
+      "Estimated state tax payments",
+    ],
+  },
+  {
+    eyebrow: "Remote Process",
+    title: "How Multi-State Preparation Works",
+    steps: [
+      {
+        title: "Identify Every State",
+        text:
+          "List each state connected with residence, work, business, property, or income.",
+      },
+      {
+        title: "Review Residency and Income",
+        text:
+          "Milana reviews timing, income source, and state documents involved.",
+      },
+      {
+        title: "Confirm Filing Scope",
+        text:
+          "The likely federal and state returns are identified before pricing is confirmed.",
+      },
+      {
+        title: "Provide Documents Securely",
+        text:
+          "State and federal records are provided through the approved secure process.",
+      },
+      {
+        title: "Prepare the Returns",
+        text:
+          "Applicable resident, part-year, or nonresident returns are prepared.",
+      },
+    ],
+  },
+];
+
+const faqs = [
+  {
+    question: "Do I need to file in every state where I worked?",
+    answer:
+      "Not always. Filing requirements depend on residency, work location, income source, withholding, reciprocity agreements, and state-specific rules.",
+  },
+  {
+    question: "What if I moved from Illinois to Florida?",
+    answer:
+      "The dates of the move, residency facts, income sources, and state withholding must be reviewed to determine the appropriate filing treatment.",
+  },
+  {
+    question: "Does rental property in another state require a return?",
+    answer:
+      "It may. Rental income connected with property in another state can create a nonresident filing requirement.",
+  },
+  {
+    question: "Can you prepare returns for states other than Illinois and Florida?",
+    answer:
+      "Multi-state returns may be accepted depending on the states involved, type of income, and complexity of the filing requirements.",
+  },
+];
+
+const relatedLinks = [
+  {
+    label: "Individual Tax Preparation",
+    href: "/tax-services/individual-tax-preparation/",
+  },
+  {
+    label: "Business Tax Preparation",
+    href: "/tax-services/business-tax-preparation/",
+  },
+  {
+    label: "Real Estate Investor Tax Services",
+    href: "/tax-services/real-estate-investor-tax-services/",
+  },
+  {
+    label: "Remote Tax Preparation",
+    href: "/tax-services/remote-tax-preparation/",
+  },
+];
+---
+
+<ServicePageLayout
+  title="Multi-State Tax Preparation | Global Bash"
+  description="Remote multi-state tax preparation for clients with income, work, residence, business activity, or property in more than one state."
+  canonicalPath="/tax-services/multi-state-tax-preparation/"
+  eyebrow="Multi-State Tax Preparation"
+  heading="Tax Preparation for Income and Activity Across State Lines"
+  introduction={[
+    "Living, working, operating a business, or owning property in more than one state can create additional filing requirements.",
+    "Global Bash reviews the states involved, residency facts, income sources, withholding, property, and business activity before confirming the return scope.",
+  ]}
+  primaryCtaLabel="Request Multi-State Tax Help"
+  primaryCtaHref="/book-tax-consultation/?service=multi-state-tax-preparation"
+  sections={sections}
+  faqs={faqs}
+  relatedLinks={relatedLinks}
+  finalCtaHeading="Discuss Your Multi-State Tax Situation"
+  finalCtaText="Identify every state connected with your residence, work, business, property, or income."
+/>

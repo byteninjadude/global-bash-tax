@@ -1,0 +1,105 @@
+---
+import LegalPageLayout from "../layouts/LegalPageLayout.astro";
+import { site } from "../config/site";
+---
+
+<LegalPageLayout
+  title="Privacy Policy | Global Bash Tax Services"
+  description="Privacy information for visitors using the Global Bash Tax Services website."
+  heading="Privacy Policy"
+  canonicalPath="/privacy-policy/"
+  effectiveDate="August 9, 2026"
+>
+  <p>
+    This Privacy Policy explains how Global Bash collects,
+    uses, protects, and shares information submitted
+    through this website.
+  </p>
+
+  <h2>Information We Collect</h2>
+
+  <p>
+    We may collect your name, email address, phone number,
+    preferred contact method, preferred language, requested
+    service, and the general message you submit.
+  </p>
+
+  <h2>Do Not Submit Sensitive Tax Information</h2>
+
+  <p>
+    Do not submit Social Security numbers, taxpayer
+    identification numbers, tax returns, bank information,
+    identity documents, passwords, or other sensitive
+    information through a public website form or regular
+    email.
+  </p>
+
+  <h2>How Information Is Used</h2>
+
+  <p>
+    Submitted information may be used to review and respond
+    to inquiries, coordinate consultations, determine
+    whether a requested service falls within the practice’s
+    scope, protect the website, and maintain appropriate
+    business records.
+  </p>
+
+  <h2>Website Service Providers</h2>
+
+  <p>
+    Website information may be processed by service
+    providers supporting hosting, security, bot protection,
+    form handling, and transactional email delivery.
+  </p>
+
+  <h2>Information Sharing</h2>
+
+  <p>
+    Global Bash does not sell personal information
+    submitted through the website. Information may be
+    shared with website service providers, when required by
+    law, to protect rights or security, or with your
+    direction or consent.
+  </p>
+
+  <h2>Data Retention and Security</h2>
+
+  <p>
+    Website inquiry information is retained only as long as
+    reasonably necessary for communication, business
+    records, legal obligations, dispute resolution, and
+    security. Reasonable safeguards are used, but no
+    electronic system can be guaranteed completely secure.
+  </p>
+
+  <h2>Cookies and Essential Technologies</h2>
+
+  <p>
+    The website may use essential technologies required for
+    security, bot prevention, form protection, and basic
+    operation. This policy should be updated before
+    additional analytics or advertising technologies are
+    activated.
+  </p>
+
+  <h2>Third-Party Links</h2>
+
+  <p>
+    External websites linked from this site operate under
+    their own privacy practices.
+  </p>
+
+  <h2>Contact</h2>
+
+  <address>
+    Email:
+    <a href={`mailto:${site.email}`}>
+      {site.email}
+    </a><br />
+
+    Phone:
+    <a href={site.phoneHref}>
+      {site.phoneDisplay}
+    </a>
+  </address>
+</LegalPageLayout>

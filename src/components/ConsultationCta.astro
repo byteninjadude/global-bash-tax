@@ -1,0 +1,50 @@
+---
+import { site } from "../config/site";
+
+interface Props {
+  heading?: string;
+  text?: string;
+  buttonLabel?: string;
+  buttonHref?: string;
+}
+
+const {
+  heading =
+    "Get Personal Help With Your Tax Situation",
+  text =
+    "Begin with a consultation to discuss your filing needs, tax year, states involved, and general circumstances.",
+  buttonLabel =
+    "Book a Tax Consultation",
+  buttonHref =
+    "/book-tax-consultation/",
+} = Astro.props;
+---
+
+<section class="consultation-cta">
+  <div class="container consultation-cta__inner">
+    <div>
+      <p class="eyebrow">Get Started</p>
+
+      <h2>{heading}</h2>
+
+      <p>{text}</p>
+    </div>
+
+    <div class="consultation-cta__actions">
+      <a
+        class="button button--primary"
+        href={buttonHref}
+      >
+        {buttonLabel}
+      </a>
+
+      <a href={site.phoneHref}>
+        Call {site.phoneDisplay}
+      </a>
+
+      <a href={`mailto:${site.email}`}>
+        {site.email}
+      </a>
+    </div>
+  </div>
+</section>

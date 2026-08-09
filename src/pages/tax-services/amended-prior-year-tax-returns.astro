@@ -1,0 +1,155 @@
+---
+import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
+
+const sections = [
+  {
+    eyebrow: "When a Return May Need Review",
+    title: "Common Reasons to Revisit an Earlier Tax Return",
+    bullets: [
+      "Income was omitted",
+      "A tax form arrived after filing",
+      "Filing status was reported incorrectly",
+      "A dependent-related item requires correction",
+      "A deduction or credit may have been missed",
+      "Business income or expenses were reported incorrectly",
+      "Investment transactions were incomplete",
+      "Rental-property information was omitted",
+      "The wrong state return was filed",
+      "A prior-year return was never filed",
+    ],
+  },
+  {
+    eyebrow: "Amended Returns",
+    title: "Correcting an Already Filed Return",
+    paragraphs: [
+      "An amended return may be used to correct eligible errors or omissions on a previously filed return.",
+      "Before preparing an amendment, Milana reviews the original return, supporting documents, proposed correction, and related state filing requirements.",
+      "Not every difference requires an amended return, and an amendment does not guarantee a refund.",
+    ],
+  },
+  {
+    eyebrow: "Prior-Year Filing",
+    title: "Preparing Unfiled or Late Returns",
+    paragraphs: [
+      "Global Bash may prepare qualifying returns for earlier tax years after the available records and filing requirements are reviewed.",
+      "Clients should gather income statements, business records, prior correspondence, estimated-payment information, and any earlier returns that are available.",
+    ],
+  },
+  {
+    eyebrow: "What to Provide",
+    title: "Documents Commonly Needed for Review",
+    bullets: [
+      "The originally filed return",
+      "Federal and state notices",
+      "W-2s and Forms 1099",
+      "Business income and expense records",
+      "Investment statements",
+      "Rental-property records",
+      "Estimated-payment confirmations",
+      "Documents supporting the proposed correction",
+      "Prior-year returns",
+      "State filing information",
+    ],
+  },
+  {
+    eyebrow: "Remote Process",
+    title: "How an Earlier Return Is Reviewed",
+    steps: [
+      {
+        title: "Describe the Issue",
+        text:
+          "Explain the tax year, return involved, and general reason for the review.",
+      },
+      {
+        title: "Provide the Original Return",
+        text:
+          "Milana reviews the previously filed return and relevant supporting documents.",
+      },
+      {
+        title: "Determine the Appropriate Filing",
+        text:
+          "The review identifies whether an amendment, original prior-year return, or another filing step may be appropriate.",
+      },
+      {
+        title: "Confirm Scope and Pricing",
+        text:
+          "Fees depend on the number of years, states, forms, records, and corrections involved.",
+      },
+      {
+        title: "Prepare the Return",
+        text:
+          "The applicable return is prepared after the engagement and secure document process are confirmed.",
+      },
+    ],
+  },
+  {
+    eyebrow: "Notice Assistance",
+    title: "Tax Notices May Require Additional Review",
+    paragraphs: [
+      "If an IRS or state notice is connected with the earlier return, Milana may review the notice, identify the filing issue, prepare related tax documents, or amend the return when appropriate.",
+      "Broader audit, collection, appeal, or legal representation is not advertised.",
+    ],
+  },
+];
+
+const faqs = [
+  {
+    question: "Will an amended return result in a refund?",
+    answer:
+      "Not necessarily. An amendment may increase a refund, reduce a balance, create additional tax, or produce no change.",
+  },
+  {
+    question: "Can you amend a return prepared by someone else?",
+    answer:
+      "Eligible corrections may be considered after the original return and supporting records are reviewed.",
+  },
+  {
+    question: "Can you prepare several missing years?",
+    answer:
+      "Multiple prior-year returns may be accepted depending on the years involved, available records, states, and complexity.",
+  },
+  {
+    question: "Can I send a tax notice through the public form?",
+    answer:
+      "No. Use the public form only to describe the issue generally. Secure document instructions are provided after the engagement is confirmed.",
+  },
+];
+
+const relatedLinks = [
+  {
+    label: "Individual Tax Preparation",
+    href: "/tax-services/individual-tax-preparation/",
+  },
+  {
+    label: "Business Tax Preparation",
+    href: "/tax-services/business-tax-preparation/",
+  },
+  {
+    label: "Multi-State Tax Preparation",
+    href: "/tax-services/multi-state-tax-preparation/",
+  },
+  {
+    label: "Remote Tax Preparation",
+    href: "/tax-services/remote-tax-preparation/",
+  },
+];
+---
+
+<ServicePageLayout
+  title="Amended and Prior-Year Tax Returns | Global Bash"
+  description="Remote assistance with amended tax returns, late filings, and qualifying prior-year federal and state returns."
+  canonicalPath="/tax-services/amended-prior-year-tax-returns/"
+  eyebrow="Amended and Prior-Year Returns"
+  heading="Help Correcting or Completing Earlier Tax Returns"
+  introduction={[
+    "A previously filed return may require correction when information was omitted, reported incorrectly, or received after filing.",
+    "Global Bash also assists with qualifying unfiled and late returns after the available records and filing requirements are reviewed.",
+  ]}
+  primaryCtaLabel="Request a Prior-Return Review"
+  primaryCtaHref="/book-tax-consultation/?service=amended-return"
+  sections={sections}
+  faqs={faqs}
+  relatedLinks={relatedLinks}
+  finalCtaHeading="Discuss an Earlier Tax Return"
+  finalCtaText="Provide the tax year and a general description of the issue. Do not submit tax documents through the public form."
+/>

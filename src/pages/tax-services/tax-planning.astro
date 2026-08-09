@@ -1,0 +1,155 @@
+---
+import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
+
+const sections = [
+  {
+    eyebrow: "Why Planning Matters",
+    title: "Tax Planning Looks Ahead",
+    paragraphs: [
+      "Tax preparation reports activity that has already occurred. Tax planning focuses on upcoming income, expenses, estimated payments, business changes, investments, and filing obligations.",
+      "Planning may help clients avoid surprises, improve record preparation, and understand the tax effect of decisions before the filing deadline arrives.",
+      "Tax planning does not guarantee a lower tax bill or a specific result.",
+    ],
+  },
+  {
+    eyebrow: "Who May Benefit",
+    title: "Tax Planning for Individuals and Businesses",
+    bullets: [
+      "Self-employed professionals",
+      "Small-business owners",
+      "Real estate investors",
+      "Clients with variable income",
+      "Clients making estimated tax payments",
+      "Clients expecting a major income change",
+      "Clients moving between states",
+      "Clients buying or selling business assets",
+      "Clients preparing for retirement contributions",
+      "Clients who owed more than expected in a prior year",
+    ],
+  },
+  {
+    eyebrow: "Planning Topics",
+    title: "What a Tax Planning Review May Address",
+    bullets: [
+      "Estimated tax payments",
+      "Income and expense timing",
+      "Business record organization",
+      "Self-employment tax considerations",
+      "Retirement contribution timing",
+      "Business asset purchases",
+      "Depreciation questions",
+      "Rental-property activity",
+      "Multi-state activity",
+      "Year-end preparation",
+      "Prior-year filing patterns",
+      "Upcoming business or personal changes",
+    ],
+    note:
+      "The topics reviewed depend on the client’s actual circumstances and the information available at the time of the consultation.",
+  },
+  {
+    eyebrow: "Year-Round Perspective",
+    title: "Planning Is Most Useful Before Year-End",
+    paragraphs: [
+      "Some tax decisions cannot be changed after the year closes. Reviewing business activity, estimated payments, investments, and major transactions before year-end may provide more time to identify available options.",
+      "Clients should not wait until the tax return is being prepared to raise questions about a major transaction, business change, property sale, or relocation.",
+    ],
+  },
+  {
+    eyebrow: "Remote Process",
+    title: "How Remote Tax Planning Works",
+    steps: [
+      {
+        title: "Describe Your Situation",
+        text:
+          "Provide a general overview of the planning concern, expected change, or tax question.",
+      },
+      {
+        title: "Review Relevant Information",
+        text:
+          "Milana identifies the income, business, property, state, or filing information needed for the discussion.",
+      },
+      {
+        title: "Discuss Planning Considerations",
+        text:
+          "Applicable considerations, deadlines, estimated payments, and preparation steps are reviewed.",
+      },
+      {
+        title: "Document Next Steps",
+        text:
+          "The client receives a summary of records, payments, or follow-up items to address.",
+      },
+    ],
+  },
+  {
+    eyebrow: "Important Boundaries",
+    title: "Tax Planning Is Not Legal or Investment Advice",
+    paragraphs: [
+      "Global Bash provides tax-preparation and tax-planning guidance within the confirmed scope of the practice.",
+      "Questions involving legal entity formation, contracts, liability protection, securities, investments, or estate planning should be reviewed with an appropriately licensed professional.",
+    ],
+  },
+];
+
+const faqs = [
+  {
+    question: "When should I schedule tax planning?",
+    answer:
+      "Planning is often most useful before a major financial or business decision and before the end of the tax year. It may also be useful after filing if the prior return showed an unexpected balance due.",
+  },
+  {
+    question:
+      "Can tax planning guarantee that I will owe less?",
+    answer:
+      "No. Tax planning cannot guarantee a lower tax bill. Its purpose is to identify applicable options, deadlines, estimated-payment needs, and possible tax consequences.",
+  },
+  {
+    question:
+      "Is tax planning only for business owners?",
+    answer:
+      "No. Individuals with investments, rental property, variable income, multi-state activity, retirement decisions, or major life changes may also benefit.",
+  },
+];
+
+const relatedLinks = [
+  {
+    label: "Business Tax Preparation",
+    href:
+      "/tax-services/business-tax-preparation/",
+  },
+  {
+    label: "Self-Employed Tax Services",
+    href:
+      "/tax-services/self-employed-tax-services/",
+  },
+  {
+    label: "Real Estate Investor Tax Services",
+    href:
+      "/tax-services/real-estate-investor-tax-services/",
+  },
+  {
+    label: "Multi-State Tax Preparation",
+    href:
+      "/tax-services/multi-state-tax-preparation/",
+  },
+];
+---
+
+<ServicePageLayout
+  title="Tax Planning Services | Global Bash"
+  description="Remote tax planning for individuals, self-employed professionals, investors, and business owners with Milana Bash."
+  canonicalPath="/tax-services/tax-planning/"
+  eyebrow="Tax Planning"
+  heading="Prepare for Future Tax Decisions"
+  introduction={[
+    "Tax planning helps individuals and business owners look ahead instead of waiting until the return is due.",
+    "Global Bash provides personalized remote planning focused on the client’s income, business activity, investments, filing history, and expected changes.",
+  ]}
+  primaryCtaLabel="Request a Tax Planning Consultation"
+  primaryCtaHref="/book-tax-consultation/?service=tax-planning"
+  sections={sections}
+  faqs={faqs}
+  relatedLinks={relatedLinks}
+  finalCtaHeading="Plan Before the Next Filing Deadline"
+  finalCtaText="Discuss estimated payments, business changes, investments, real estate activity, or other upcoming tax considerations."
+/>

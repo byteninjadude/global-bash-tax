@@ -1,0 +1,173 @@
+---
+import ServicePageLayout from "../../layouts/ServicePageLayout.astro";
+
+const sections = [
+  {
+    eyebrow: "Who This Service Is For",
+    title:
+      "Individual Tax Services for a Range of Filing Situations",
+    bullets: [
+      "Employees receiving Forms W-2",
+      "Individuals and families with dependents",
+      "Retirees",
+      "Investors",
+      "Independent contractors",
+      "People with rental income",
+      "Clients who moved between states",
+      "Clients with several income sources",
+      "People who previously used tax software",
+      "Clients needing an amended or prior-year return",
+    ],
+  },
+  {
+    eyebrow: "What May Be Included",
+    title:
+      "What Individual Tax Preparation May Cover",
+    paragraphs: [
+      "The forms, schedules, deductions, and credits involved depend on the facts of each client’s return.",
+    ],
+    bullets: [
+      "Form 1040",
+      "Filing-status review",
+      "Wage and salary income",
+      "Interest and dividend income",
+      "Investment transactions",
+      "Retirement distributions",
+      "Social Security income",
+      "Self-employment income",
+      "Rental income",
+      "Itemized deductions",
+      "Applicable tax credits",
+      "Estimated payments",
+      "Applicable state returns",
+      "Multi-state filing requirements",
+    ],
+    note:
+      "Not every item applies to every client. Eligibility for a deduction, credit, election, or filing treatment depends on the client’s specific circumstances.",
+  },
+  {
+    eyebrow: "Professional Review",
+    title: "Why Personal Review Matters",
+    paragraphs: [
+      "Automated tax programs rely on the information and answers entered by the user. When income is omitted, a question is misunderstood, or a potential deduction is not recognized, the resulting return may be incomplete or inaccurate.",
+      "Milana reviews the information provided, asks follow-up questions where necessary, and explains the documentation required for the return.",
+      "Professional preparation does not guarantee a refund or a particular tax result.",
+    ],
+  },
+  {
+    eyebrow: "Common Situations",
+    title: "When Clients Seek Individual Tax Help",
+    bullets: [
+      "They are unsure which documents are needed.",
+      "Their income changed during the year.",
+      "They started self-employment or contract work.",
+      "They bought or sold investments.",
+      "They own rental property.",
+      "They moved or worked in more than one state.",
+      "They received an IRS or state tax notice.",
+      "They believe an earlier return may contain an error.",
+      "They owe more than expected.",
+      "Their return has become too complex for self-preparation.",
+    ],
+  },
+  {
+    eyebrow: "Remote Process",
+    title:
+      "Complete Your Individual Return Remotely",
+    steps: [
+      {
+        title: "Request a Consultation",
+        text:
+          "Provide a general, non-sensitive description of your filing situation.",
+      },
+      {
+        title: "Discuss the Return",
+        text:
+          "Milana identifies the tax year, states, type of return, and general documents involved.",
+      },
+      {
+        title: "Confirm Scope and Pricing",
+        text:
+          "The work and fees are discussed based on the complexity of the return.",
+      },
+      {
+        title: "Provide Documents Securely",
+        text:
+          "Secure document instructions are provided after the engagement is confirmed.",
+      },
+      {
+        title: "Review and Complete",
+        text:
+          "Milana prepares the return and follows up regarding questions or missing information.",
+      },
+    ],
+  },
+];
+
+const faqs = [
+  {
+    question: "What documents do I need?",
+    answer:
+      "The required documents depend on your income and activities. Common items include W-2s, 1099s, investment statements, retirement forms, mortgage information, business records, rental-property records, and documentation related to eligible deductions or credits.",
+  },
+  {
+    question:
+      "Can you prepare my return if I live outside Illinois or Florida?",
+    answer:
+      "Global Bash provides remote services. Acceptance depends on the states involved, the filing requirements, and whether the return falls within the practice’s service scope.",
+  },
+  {
+    question:
+      "Can you correct a return prepared elsewhere?",
+    answer:
+      "Eligible errors or omissions may be corrected through an amended return after the original filing and supporting documents are reviewed.",
+  },
+  {
+    question:
+      "Can I send tax forms through the website contact form?",
+    answer:
+      "No. Sensitive tax documents, Social Security numbers, banking information, and identification information should not be submitted through the public website form or regular email.",
+  },
+];
+
+const relatedLinks = [
+  {
+    label: "Amended and Prior-Year Returns",
+    href:
+      "/tax-services/amended-prior-year-tax-returns/",
+  },
+  {
+    label: "Multi-State Tax Preparation",
+    href:
+      "/tax-services/multi-state-tax-preparation/",
+  },
+  {
+    label: "Self-Employed Tax Services",
+    href:
+      "/tax-services/self-employed-tax-services/",
+  },
+  {
+    label: "Tax Planning",
+    href: "/tax-services/tax-planning/",
+  },
+];
+---
+
+<ServicePageLayout
+  title="Individual Tax Preparation Services | Milana Bash"
+  description="Personalized remote individual tax preparation with Milana Bash for income, deductions, credits, investments, self-employment, rental property, and multi-state needs."
+  canonicalPath="/tax-services/individual-tax-preparation/"
+  eyebrow="Individual Tax Preparation"
+  heading="Personal Tax Preparation With Professional Attention"
+  introduction={[
+    "Your tax return may include more than wages and withholding. Investments, dependents, self-employment, retirement income, property ownership, relocation, and other changes can affect how your return should be prepared.",
+    "Global Bash provides personalized remote tax preparation designed around the facts of your situation.",
+  ]}
+  primaryCtaLabel="Request Individual Tax Preparation"
+  primaryCtaHref="/book-tax-consultation/?service=individual-tax-preparation"
+  sections={sections}
+  faqs={faqs}
+  relatedLinks={relatedLinks}
+  finalCtaHeading="Get Help With Your Individual Tax Return"
+  finalCtaText="Begin with a consultation to discuss your filing needs, tax year, states involved, and general situation."
+/>

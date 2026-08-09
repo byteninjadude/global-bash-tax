@@ -1,0 +1,84 @@
+---
+import LegalPageLayout from "../layouts/LegalPageLayout.astro";
+import { site } from "../config/site";
+---
+
+<LegalPageLayout
+  title="Website Disclaimer | Global Bash Tax Services"
+  description="Important limitations concerning tax information and services described on the Global Bash website."
+  heading="Website and Tax Information Disclaimer"
+  canonicalPath="/website-disclaimer/"
+  effectiveDate="August 9, 2026"
+>
+  <h2>General Information Only</h2>
+
+  <p>
+    Website content provides general information about
+    Global Bash and its services. It is not individualized
+    tax, legal, accounting, financial, investment, or real
+    estate advice.
+  </p>
+
+  <h2>No Professional Relationship</h2>
+
+  <p>
+    Viewing the website, sending a message, or requesting a
+    consultation does not create a professional
+    relationship.
+  </p>
+
+  <h2>No Guaranteed Outcome</h2>
+
+  <p>
+    Global Bash does not guarantee a refund, deduction,
+    credit, tax reduction, approval by a tax authority, or
+    any other result.
+  </p>
+
+  <h2>Client Information</h2>
+
+  <p>
+    Tax preparation depends on complete, accurate, and
+    timely information supplied by the client.
+  </p>
+
+  <h2>Tax Notices and Representation</h2>
+
+  <p>
+    References to tax-notice assistance do not promise
+    audit, appeals, collections, litigation, or legal
+    representation. The precise service must be reviewed
+    and accepted before work begins.
+  </p>
+
+  <h2>Credentials and Scope</h2>
+
+  <p>
+    Milana Bash is presented as an IRS-registered tax
+    return preparer and MBA. The website does not represent
+    her as a CPA, enrolled agent, or attorney.
+  </p>
+
+  <h2>Electronic Communications</h2>
+
+  <p>
+    Standard website forms and ordinary email are not
+    approved for sending Social Security numbers, bank
+    information, tax returns, identity documents, or other
+    sensitive information.
+  </p>
+
+  <h2>Contact</h2>
+
+  <address>
+    Email:
+    <a href={`mailto:${site.email}`}>
+      {site.email}
+    </a><br />
+
+    Phone:
+    <a href={site.phoneHref}>
+      {site.phoneDisplay}
+    </a>
+  </address>
+</LegalPageLayout>

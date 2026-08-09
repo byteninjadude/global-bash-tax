@@ -1,0 +1,246 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import ConsultationCta from "../components/ConsultationCta.astro";
+import { site } from "../config/site";
+---
+
+<BaseLayout
+  title="About Milana Bash, MBA | Global Bash Tax Services"
+  description="Meet Milana Bash, an IRS-registered tax return preparer with more than 20 years of experience serving individuals, investors, and business owners."
+  canonicalPath="/about-milana-bash/"
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "About Milana Bash" },
+        ]}
+      />
+
+      <div class="page-hero__content">
+        <p class="eyebrow">About Milana Bash</p>
+
+        <h1>
+          Experienced Tax Guidance With Personal Attention
+        </h1>
+
+        <p>
+          Milana Bash is an IRS-registered tax return
+          preparer with more than 20 years of experience
+          helping individuals, self-employed professionals,
+          investors, and business owners navigate their
+          tax responsibilities.
+        </p>
+
+        <div class="button-group">
+          <a
+            class="button button--primary"
+            href="/book-tax-consultation/"
+          >
+            Book a Tax Consultation
+          </a>
+
+          <a
+            class="button button--secondary"
+            href={site.phoneHref}
+          >
+            Call {site.phoneDisplay}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container split-layout">
+      <div class="split-layout__media">
+        <img
+          src="/images/about/milana-bash-about.webp"
+          alt="Milana Bash"
+          width="800"
+          height="1000"
+        />
+      </div>
+
+      <div class="split-layout__content">
+        <p class="eyebrow">Professional Background</p>
+
+        <h2>
+          More Than Two Decades of Tax Experience
+        </h2>
+
+        <p>
+          Milana has spent more than 20 years assisting
+          clients with individual and business tax
+          preparation, tax planning, amended returns,
+          prior-year filings, and situations involving
+          self-employment, real estate, and multiple states.
+        </p>
+
+        <p>
+          She holds a Master of Business Administration
+          and has a background in business administration,
+          marketing, and accounting.
+        </p>
+
+        <p>
+          Her practice has grown primarily through repeat
+          clients, referrals, and long-term professional
+          relationships.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="container content-page">
+      <p class="eyebrow">Her Approach</p>
+
+      <h2>
+        Clients Should Feel Informed, Not Rushed
+      </h2>
+
+      <p>
+        Milana believes tax preparation should involve more
+        than entering numbers into software. Every client
+        has a different combination of income, expenses,
+        responsibilities, business activity, investments,
+        and long-term goals.
+      </p>
+
+      <p>
+        Her approach begins with understanding the client’s
+        situation, asking appropriate follow-up questions,
+        and explaining the information needed to prepare
+        the return.
+      </p>
+
+      <p>
+        The objective is to prepare accurate tax work,
+        identify applicable tax items, and help clients
+        make more informed decisions for future years.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="page-section-heading">
+        <p class="eyebrow">Professional Profile</p>
+
+        <h2>
+          Experience Across Tax, Business, and Real Estate
+        </h2>
+      </div>
+
+      <div class="profile-grid">
+        <article class="content-card">
+          <h3>
+            IRS-Registered Tax Return Preparer
+          </h3>
+
+          <p>
+            Professional preparation of qualifying
+            federal and state tax returns for individuals
+            and businesses.
+          </p>
+        </article>
+
+        <article class="content-card">
+          <h3>
+            Master of Business Administration
+          </h3>
+
+          <p>
+            Academic background involving business
+            administration, marketing, and accounting.
+          </p>
+        </article>
+
+        <article class="content-card">
+          <h3>
+            Licensed Real Estate Professional
+          </h3>
+
+          <p>
+            Real estate experience that provides useful
+            context when assisting property owners and
+            investors.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy">
+    <div class="container split-layout split-layout--reverse">
+      <div class="split-layout__media">
+        <img
+          src="/images/services/milana-bash-real-estate-tax.jpg"
+          alt="Milana Bash in a professional real estate setting"
+          width="828"
+          height="1792"
+          loading="lazy"
+        />
+      </div>
+
+      <div class="split-layout__content split-layout__content--light">
+        <p class="eyebrow">Real Estate Background</p>
+
+        <h2>
+          Practical Context for Property Owners and Investors
+        </h2>
+
+        <p>
+          Milana is also a licensed real estate professional
+          associated with Global Bash. Her real estate
+          background provides useful context when working
+          with rental-property owners and investors.
+        </p>
+
+        <p>
+          Real estate license number: 471019781.
+        </p>
+
+        <a
+          class="button button--light"
+          href={site.realEstateUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Global Bash Real Estate
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container content-page">
+      <p class="eyebrow">Remote and Multilingual</p>
+
+      <h2>
+        Professional Service Wherever You Are
+      </h2>
+
+      <p>
+        Global Bash operates as a fully remote tax
+        practice. Milana is based in Illinois and Florida
+        and communicates with clients through phone,
+        email, virtual communication, and an approved
+        secure document process.
+      </p>
+
+      <p>
+        Tax services are available in English, Bulgarian,
+        and Turkish.
+      </p>
+    </div>
+  </section>
+
+  <ConsultationCta
+    heading="Work Directly With Milana Bash"
+    text="Begin with a consultation to discuss your tax situation, filing needs, and next steps."
+  />
+</BaseLayout>

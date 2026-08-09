@@ -1,0 +1,92 @@
+---
+import LegalPageLayout from "../layouts/LegalPageLayout.astro";
+import { site } from "../config/site";
+---
+
+<LegalPageLayout
+  title="Terms of Use | Global Bash Tax Services"
+  description="Terms governing use of the Global Bash Tax Services website."
+  heading="Terms of Use"
+  canonicalPath="/terms-of-use/"
+  effectiveDate="August 9, 2026"
+>
+  <p>
+    These Terms of Use govern access to and use of the
+    Global Bash Tax Services website.
+  </p>
+
+  <h2>General Information</h2>
+
+  <p>
+    Website content is provided for general informational
+    purposes and does not constitute individualized tax,
+    legal, accounting, financial, investment, or real
+    estate advice.
+  </p>
+
+  <h2>No Client Relationship</h2>
+
+  <p>
+    Visiting the website, sending an email, submitting a
+    form, or requesting a consultation does not create a
+    professional relationship. An engagement begins only
+    after Global Bash accepts the work and confirms the
+    scope, documentation, terms, and fees.
+  </p>
+
+  <h2>Service Availability</h2>
+
+  <p>
+    Website descriptions do not guarantee that a particular
+    return, issue, state, tax year, or matter will be
+    accepted.
+  </p>
+
+  <h2>No Guaranteed Result</h2>
+
+  <p>
+    Global Bash does not guarantee a refund, tax savings,
+    acceptance of a filing position, or any other specific
+    result.
+  </p>
+
+  <h2>User Responsibilities</h2>
+
+  <p>
+    Users must not submit unlawful or misleading
+    information, attempt unauthorized website access,
+    misuse automated forms, or submit sensitive tax
+    documents through public forms.
+  </p>
+
+  <h2>Website Accuracy</h2>
+
+  <p>
+    Tax rules, forms, deadlines, and administrative
+    guidance may change. Website information should not
+    replace advice based on current law and the facts of a
+    specific situation.
+  </p>
+
+  <h2>Third-Party Websites</h2>
+
+  <p>
+    Global Bash does not control external websites and is
+    not responsible for their availability, content,
+    privacy, or security.
+  </p>
+
+  <h2>Contact</h2>
+
+  <address>
+    Email:
+    <a href={`mailto:${site.email}`}>
+      {site.email}
+    </a><br />
+
+    Phone:
+    <a href={site.phoneHref}>
+      {site.phoneDisplay}
+    </a>
+  </address>
+</LegalPageLayout>

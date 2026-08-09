@@ -1,0 +1,23 @@
+{
+    "name":  "global-bash-tax",
+    "version":  "1.0.0",
+    "private":  true,
+    "type":  "module",
+    "scripts":  {
+                    "dev":  "astro dev",
+                    "check":  "astro check",
+                    "build":  "astro check \u0026\u0026 astro build",
+                    "preview":  "astro preview",
+                    "functions:check":  "wrangler pages functions build functions --outfile=.functions-build/index.js"
+                },
+    "dependencies":  {
+                         "@astrojs/sitemap":  "3.7.3",
+                         "astro":  "7.2.0"
+                     },
+    "devDependencies":  {
+                            "@astrojs/check":  "0.9.10",
+                            "@cloudflare/workers-types":  "5.20260809.1",
+                            "typescript":  "6.0.3",
+                            "wrangler":  "4.120.0"
+                        }
+}

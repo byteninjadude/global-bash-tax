@@ -1,0 +1,189 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import ServiceCard from "../../components/ServiceCard.astro";
+import ConsultationCta from "../../components/ConsultationCta.astro";
+import { site } from "../../config/site";
+
+const services = [
+  {
+    title: "Individual Tax Preparation",
+    description:
+      "Remote preparation of federal and applicable state individual income tax returns.",
+    href:
+      "/tax-services/individual-tax-preparation/",
+  },
+  {
+    title: "Business Tax Preparation",
+    description:
+      "Return preparation for qualifying corporations, partnerships, LLCs, and business owners.",
+    href:
+      "/tax-services/business-tax-preparation/",
+  },
+  {
+    title: "Tax Planning",
+    description:
+      "Year-round guidance involving estimated payments, preparation, business activity, and future filing needs.",
+    href:
+      "/tax-services/tax-planning/",
+  },
+  {
+    title: "Self-Employed Tax Services",
+    description:
+      "Tax support for contractors, consultants, entrepreneurs, and other self-employed professionals.",
+    href:
+      "/tax-services/self-employed-tax-services/",
+  },
+  {
+    title: "Amended and Prior-Year Returns",
+    description:
+      "Help reviewing earlier filings and preparing eligible amended, late, or prior-year returns.",
+    href:
+      "/tax-services/amended-prior-year-tax-returns/",
+  },
+  {
+    title: "Multi-State Tax Preparation",
+    description:
+      "Preparation support when income, residence, work, business, or property involves multiple states.",
+    href:
+      "/tax-services/multi-state-tax-preparation/",
+  },
+  {
+    title: "Real Estate Investor Tax Services",
+    description:
+      "Tax preparation involving rental income, expenses, depreciation, assets, and property activity.",
+    href:
+      "/tax-services/real-estate-investor-tax-services/",
+  },
+  {
+    title: "Remote Tax Preparation",
+    description:
+      "A fully remote process using phone, email, virtual communication, and an approved secure platform.",
+    href:
+      "/tax-services/remote-tax-preparation/",
+  },
+];
+---
+
+<BaseLayout
+  title="Tax Preparation and Planning Services | Global Bash"
+  description="Explore remote individual and business tax preparation, tax planning, amended returns, multi-state filings, and self-employed tax services from Global Bash."
+  canonicalPath="/tax-services/"
+>
+  <section class="page-hero">
+    <div class="container">
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Tax Services" },
+        ]}
+      />
+
+      <div class="page-hero__content">
+        <p class="eyebrow">
+          Global Bash Tax Services
+        </p>
+
+        <h1>
+          Personalized Tax Services for Individuals
+          and Businesses
+        </h1>
+
+        <p>
+          Global Bash provides remote tax preparation
+          and planning for individuals, self-employed
+          professionals, investors, corporations,
+          partnerships, and business owners.
+        </p>
+
+        <p>
+          Each engagement begins with a review of your
+          situation so the service can be matched to your
+          filing requirements, income sources, business
+          activity, and tax concerns.
+        </p>
+
+        <div class="button-group">
+          <a
+            class="button button--primary"
+            href="/book-tax-consultation/"
+          >
+            Request a Tax Consultation
+          </a>
+
+          <a
+            class="button button--secondary"
+            href={site.phoneHref}
+          >
+            Call {site.phoneDisplay}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="service-hub-heading">
+        <p class="eyebrow">
+          Find the Right Service
+        </p>
+
+        <h2>
+          Tax Support Based on Your Situation
+        </h2>
+
+        <p>
+          A wage earner with a straightforward return
+          has different requirements from a self-employed
+          consultant, real estate investor, partnership,
+          or corporation.
+        </p>
+
+        <p>
+          Final scope and pricing are determined after
+          the relevant facts and filing requirements are
+          reviewed.
+        </p>
+      </div>
+
+      <div class="card-grid card-grid--three">
+        {
+          services.map((service) => (
+            <ServiceCard {...service} />
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="container content-page">
+      <p class="eyebrow">Service Boundaries</p>
+
+      <h2>
+        Services Depend on the Facts of Each Situation
+      </h2>
+
+      <p>
+        The website provides general descriptions of the
+        practice’s services. It does not guarantee that
+        every matter will be accepted or that every
+        described tax treatment will apply.
+      </p>
+
+      <p>
+        Global Bash does not provide legal or investment
+        advice. Broader IRS representation, bookkeeping,
+        payroll processing, and sales-tax services are
+        not advertised unless separately confirmed.
+      </p>
+    </div>
+  </section>
+
+  <ConsultationCta
+    heading="Not Sure Which Tax Service You Need?"
+    text="Provide a brief, non-sensitive description of your situation. Milana will review your inquiry and contact you about the appropriate next step."
+    buttonLabel="Request a Tax Consultation"
+  />
+</BaseLayout>
