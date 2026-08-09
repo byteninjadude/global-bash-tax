@@ -1238,3 +1238,22 @@ p {
 .not-found-page .content-narrow {
   margin-inline: auto;
 }
+/* Homepage hero portrait framing */
+.home-hero__media {
+  overflow: hidden;
+  background: #eef3f7;
+}
+
+.home-hero__media img {
+  display: block;
+  width: 86%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+@media (max-width: 680px) {
+  .home-hero__media img {
+    width: 100%;
+  }
+}
