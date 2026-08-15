@@ -7,8 +7,8 @@ export const site = {
 
   temporaryOrigin: "https://globalbashtax.example",
 
-  phoneDisplay: "847-454-7106",
-  phoneHref: "tel:+18474547106",
+  phoneDisplay: "224-212-0612",
+  phoneHref: "tel:+12242120612",
   email: "taxes@globalbash.com",
 
   serviceModel: "Fully remote tax services",
