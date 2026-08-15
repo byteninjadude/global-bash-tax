@@ -14,6 +14,7 @@ export const GET: APIRoute = ({ site }) => {
   const body = indexable
     ? [
         "User-agent: *",
+        "Content-Signal: search=yes, ai-input=yes, ai-train=yes, use=full",
         "Allow: /",
         "",
         `Sitemap: ${new URL("sitemap-index.xml", origin).href}`,
